@@ -169,4 +169,3 @@ Special thanks to the web development community for inspiration and the creators
 **📂 Repository**: [https://github.com/TonyStark1729/Learn-HTML](https://github.com/TonyStark1729/Learn-HTML)
 
 </content>
-<parameter name="filePath">d:\HTML\README.md
