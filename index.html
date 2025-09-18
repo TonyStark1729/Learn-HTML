@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Learn HTML step by step with comprehensive tutorials, examples, and structured content from basics to advanced topics."
+    />
+    <meta
+      name="keywords"
+      content="HTML, tutorial, web development, learn HTML, markup language, web design"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Learn HTML – Step by Step</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li aria-current="page">Home</li>
+        </ol>
+      </nav>
+
+      <h1>Learn HTML – Step by Step</h1>
+
+      <img
+          src="images/index/htmlimg.webp"
+          alt="HTML5 logo showing the orange shield with white HTML text"
+          width="120"
+          height="100"
+        />
+    </header>
+    <main id="main-content">
+      <section id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="#introduction">Introduction to HTML</a></li>
+          <li><a href="#simple-document">A Simple HTML Document</a></li>
+          <li><a href="#elements">What is an HTML Element?</a></li>
+          <li><a href="#browsers">Web Browsers</a></li>
+          <li><a href="#page-structure">HTML Page Structure</a></li>
+          <li><a href="#why-learn">Why Learn HTML?</a></li>
+          <li><a href="#chapters">Main Topics</a></li>
+          <li><a href="#faq">Frequently Asked Questions</a></li>
+          <li><a href="#start">Start Your Journey</a></li>
+        </ul>
+        <hr />
+      </section>
+      <section id="introduction">
+        <h2>Introduction to HTML</h2>
+
+        <details>
+          <summary>Click to expand introduction</summary>
+          <ul>
+            <li>HTML stands for Hyper Text Markup Language</li>
+            <li>HTML is the standard markup language for creating Web pages</li>
+            <li>HTML describes the structure of a Web page</li>
+            <li>HTML consists of a series of elements</li>
+            <li>HTML elements tell the browser how to display the content</li>
+            <li>
+              HTML elements label pieces of content such as "this is a heading",
+              "this is a paragraph", "this is a link", etc.
+            </li>
+          </ul>
+
+          <p>
+            Learn more about HTML basics in
+            <a href="chapter2.html">Chapter 2</a>.
+          </p>
+        </details>
+
+        <hr />
+      </section>
+
+      <section id="simple-document">
+        <h2>A Simple HTML Document</h2>
+
+        <details>
+          <summary>Click to expand simple document explanation</summary>
+          <ul>
+            <li>
+              The &lt;!DOCTYPE html&gt; declaration defines that this document
+              is an HTML5 document
+            </li>
+            <li>
+              The &lt;html&gt; element is the root element of an HTML page
+            </li>
+            <li>
+              The &lt;head&gt; element contains meta information about the HTML
+              page
+            </li>
+            <li>
+              The &lt;title&gt; element specifies a title for the HTML page
+              (which is shown in the browser's title bar or in the page's tab)
+            </li>
+            <li>
+              The &lt;body&gt; element defines the document's body, and is a
+              container for all the visible contents, such as headings,
+              paragraphs, images, hyperlinks, tables, lists, etc.
+            </li>
+            <li>The &lt;h1&gt; element defines a large heading</li>
+            <li>The &lt;p&gt; element defines a paragraph</li>
+          </ul>
+
+          <p>See detailed examples in <a href="chapter2.html">Chapter 2</a>.</p>
+        </details>
+      </section>
+      <section id="elements">
+        <h2>What is an HTML Element?</h2>
+
+        <details>
+          <summary>Click to expand HTML elements explanation</summary>
+          <p>
+            An HTML element is defined by a start tag, some content, and an end
+            tag. The HTML element is everything from the start tag to the end
+            tag.
+          </p>
+
+          <p>
+            Learn more about HTML elements in
+            <a href="chapter2.html">Chapter 2</a>.
+          </p>
+        </details>
+      </section>
+
+      <section id="browsers">
+
+        <h2>Web Browsers</h2>
+        <img
+          src="images/index/web-browser-icon.png"
+          alt="Icon representing a web browser window with address bar and content area"
+          width="100"
+          height="80"
+        />
+        <p>
+          The purpose of a web browser (Chrome, Edge, Firefox, Safari) is to
+          read HTML documents and display them correctly. A browser does not
+          display the HTML tags, but uses them to determine how to display the
+          document.
+        </p>
+
+        <p>
+          Explore web browsers in detail in
+          <a href="chapter1.html">Chapter 1</a>.
+        </p>
+      </section>
+
+      <section id="page-structure">
+        <h2>HTML Page Structure</h2>
+
+        <p>Below is a visualization of an HTML page structure:</p>
+
+        <pre>
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;Page title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre
+        >
+
+        <p>
+          Note: The content inside the &lt;body&gt; section will be displayed in
+          a browser. The content inside the &lt;title&gt; element will be shown
+          in the browser's title bar or in the page's tab.
+        </p>
+
+        <figure>
+          <img
+            src="images/index/html-structure-diagram.png"
+            alt="Diagram showing HTML document structure with DOCTYPE, html, head, and body elements in a hierarchical layout"
+            width="600"
+            height="400"
+          />
+          <figcaption>
+            Visual representation of HTML document structure
+          </figcaption>
+        </figure>
+
+        <p>
+          Learn about HTML structure in <a href="chapter4.html">Chapter 4</a>.
+        </p>
+      </section>
+
+      <section id="why-learn">
+        <h2>Why Learn HTML?</h2>
+
+        <ul>
+          <li>HTML is the foundation of all web pages.</li>
+          <li>It is easy to learn and essential for web development.</li>
+          <li>Understanding HTML helps you create and modify websites.</li>
+          <li>It is the first step in becoming a web developer.</li>
+        </ul>
+      </section>
+
+      <section id="chapters">
+        <h2>Main Topics</h2>
+
+        <ol>
+          <li>
+            <a href="chapter1.html"
+              >Chapter 1 – Introduction to Web & Internet Basics</a
+            >
+          </li>
+          <li><a href="chapter2.html">Chapter 2 – Basics of HTML</a></li>
+          <li>
+            <a href="chapter3.html">Chapter 3 – Lists & Tables in HTML</a>
+          </li>
+          <li>
+            <a href="chapter4.html">Chapter 4 – File Paths & Boilerplate</a>
+          </li>
+          <li><a href="chapter5.html">Chapter 5 – Forms in HTML</a></li>
+          <li>
+            <a href="chapter6.html">Chapter 6 – Media & Multi-Page Websites</a>
+          </li>
+        </ol>
+      </section>
+
+      <section id="interactive-practice">
+        <h2>Interactive HTML Practice</h2>
+        <p>
+          Test your HTML knowledge with these interactive forms. Try filling
+          them out to practice different input types!
+        </p>
+
+        <h3>Quick HTML Quiz</h3>
+        <form action="#" method="get">
+          <fieldset>
+            <legend>What does HTML stand for?</legend>
+            <input type="radio" id="html1" name="html-meaning" value="wrong1" />
+            <label for="html1">HyperText Machine Language</label><br />
+            <input type="radio" id="html2" name="html-meaning" value="wrong2" />
+            <label for="html2">HighTech Markup Language</label><br />
+            <input
+              type="radio"
+              id="html3"
+              name="html-meaning"
+              value="correct"
+            />
+            <label for="html3">HyperText Markup Language</label><br />
+            <input type="radio" id="html4" name="html-meaning" value="wrong3" />
+            <label for="html4">Home Tool Markup Language</label>
+          </fieldset>
+
+          <br />
+          <label for="favorite-element"
+            >What's your favorite HTML element?</label
+          >
+          <input
+            type="text"
+            id="favorite-element"
+            name="favorite-element"
+            placeholder="e.g., &lt;p&gt;, &lt;h1&gt;, &lt;a&gt;"
+          />
+
+          <br /><br />
+          <label for="html-experience">Rate your HTML experience:</label>
+          <select id="html-experience" name="html-experience">
+            <option value="">Select level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="expert">Expert</option>
+          </select>
+
+          <br /><br />
+          <fieldset>
+            <legend>
+              Which HTML topics have you learned? (Check all that apply)
+            </legend>
+            <input
+              type="checkbox"
+              id="topic-basic"
+              name="topics"
+              value="basic"
+            />
+            <label for="topic-basic">Basic HTML structure</label><br />
+            <input
+              type="checkbox"
+              id="topic-links"
+              name="topics"
+              value="links"
+            />
+            <label for="topic-links">Links and navigation</label><br />
+            <input
+              type="checkbox"
+              id="topic-lists"
+              name="topics"
+              value="lists"
+            />
+            <label for="topic-lists">Lists and tables</label><br />
+            <input
+              type="checkbox"
+              id="topic-forms"
+              name="topics"
+              value="forms"
+            />
+            <label for="topic-forms">Forms and input elements</label><br />
+            <input
+              type="checkbox"
+              id="topic-semantic"
+              name="topics"
+              value="semantic"
+            />
+            <label for="topic-semantic">Semantic HTML</label>
+          </fieldset>
+
+          <br />
+          <input type="submit" value="Submit Quiz" />
+          <input type="reset" value="Clear Form" />
+        </form>
+
+        <h3>Contact Practice Form</h3>
+        <form action="#" method="post">
+          <label for="practice-name">Name:</label>
+          <input
+            type="text"
+            id="practice-name"
+            name="name"
+            required
+          /><br /><br />
+
+          <label for="practice-email">Email:</label>
+          <input
+            type="email"
+            id="practice-email"
+            name="email"
+            required
+          /><br /><br />
+
+          <label for="practice-message">Message:</label><br />
+          <textarea
+            id="practice-message"
+            name="message"
+            rows="4"
+            cols="50"
+            placeholder="Type your message here..."
+            required
+          ></textarea
+          ><br /><br />
+
+          <label for="practice-priority">Priority:</label>
+          <select id="practice-priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium" value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="urgent">Urgent</option></select
+          ><br /><br />
+
+          <input
+            type="checkbox"
+            id="practice-newsletter"
+            name="newsletter"
+            checked
+          />
+          <label for="practice-newsletter"
+            >Subscribe to HTML tips newsletter</label
+          ><br /><br />
+
+          <input type="submit" value="Send Message" />
+          <input type="reset" value="Clear" />
+        </form>
+
+        <h3>HTML Code Playground</h3>
+        <p>Practice writing and testing HTML code in real-time:</p>
+        <iframe
+          src="https://html-online.com/"
+          width="100%"
+          height="600"
+          frameborder="1"
+          title="HTML Code Editor - Practice your HTML skills"
+          allowfullscreen
+        ></iframe>
+        <p>
+          <em
+            >This interactive code editor allows you to write HTML code and see
+            the results instantly. Perfect for practicing what you've learned in
+            the tutorials!</em
+          >
+        </p>
+      </section>
+
+      <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+
+        <details>
+          <summary>What is HTML and why should I learn it?</summary>
+          <p>
+            HTML (HyperText Markup Language) is the standard markup language for
+            creating web pages. It's the foundation of all websites and is
+            essential for anyone interested in web development. Learning HTML
+            gives you the ability to create and modify websites, understand how
+            the web works, and provides a strong foundation for learning other
+            web technologies like CSS and JavaScript.
+          </p>
+        </details>
+
+        <details>
+          <summary>Do I need any special software to learn HTML?</summary>
+          <p>
+            No! You only need a text editor (like Notepad, VS Code, or any basic
+            text editor) and a web browser. HTML files are plain text files that
+            can be opened in any browser. This makes HTML one of the easiest
+            programming languages to get started with.
+          </p>
+        </details>
+
+        <details>
+          <summary>How long does it take to learn HTML?</summary>
+          <p>
+            The basics of HTML can be learned in a few hours to a few days,
+            depending on your pace and prior experience. This tutorial is
+            designed to take you from complete beginner to having a solid
+            understanding of HTML fundamentals. The key is practice - try
+            creating your own HTML pages as you go through the chapters.
+          </p>
+        </details>
+
+        <details>
+          <summary>Is HTML difficult for beginners?</summary>
+          <p>
+            HTML is actually one of the easiest languages for beginners to
+            learn! It uses simple, readable tags and has a logical structure.
+            Unlike programming languages, HTML is more about describing content
+            structure rather than complex logic. If you can write a simple email
+            or document, you can learn HTML.
+          </p>
+        </details>
+
+        <details>
+          <summary>What's the difference between HTML and CSS?</summary>
+          <p>
+            HTML is used to structure and organize content on a web page (like
+            headings, paragraphs, lists, etc.), while CSS (Cascading Style
+            Sheets) is used to control the appearance and layout of that content
+            (colors, fonts, spacing, etc.). HTML provides the skeleton, CSS
+            provides the styling.
+          </p>
+        </details>
+
+        <details>
+          <summary>Can I create a website with just HTML?</summary>
+          <p>
+            Yes! You can create fully functional websites using only HTML. While
+            modern websites often use CSS for styling and JavaScript for
+            interactivity, HTML alone is sufficient for creating informative,
+            accessible websites. This tutorial focuses on pure HTML to help you
+            understand the fundamentals.
+          </p>
+        </details>
+
+        <details>
+          <summary>How do I use the practice exercises?</summary>
+          <p>
+            Each chapter includes interactive practice exercises to help you
+            apply what you've learned. Look for the "Practice" sections within
+            chapters, or visit our dedicated
+            <a href="practice.html">Practice page</a> for comprehensive quizzes
+            and form exercises. These exercises use only HTML elements for
+            interactivity.
+          </p>
+        </details>
+
+        <details>
+          <summary>What should I do if I get stuck?</summary>
+          <p>
+            If you get stuck on a concept:
+            <br />1. Re-read the relevant chapter section <br />2. Try the
+            practice exercises <br />3. Check the
+            <a href="glossary.html">Glossary</a> for term definitions <br />4.
+            <a href="contact.html">Contact us</a> for help <br />Remember:
+            learning HTML is about practice and experimentation!
+          </p>
+        </details>
+
+        <details>
+          <summary>Are there any prerequisites for this tutorial?</summary>
+          <p>
+            No prerequisites! This tutorial is designed for complete beginners.
+            You only need basic computer skills and the ability to use a text
+            editor and web browser. We'll start with the absolute basics and
+            build up your knowledge step by step.
+          </p>
+        </details>
+      </section>
+
+      <section id="start">
+        <h2>Start Your Journey</h2>
+
+        <p>
+          Begin with Chapter 1 to learn the basics. Each chapter builds on the
+          previous one, guiding you step by step.
+        </p>
+
+        <p><a href="getting-started.html">🚀 Get Started Now!</a></p>
+        <p>
+          <em
+            >Or visit our <a href="resources.html">Resources page</a> for
+            practice tools</em
+          >
+        </p>
+      </section>
+    </main>
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html>
