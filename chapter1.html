@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chapter 1: Introduction to Web & Internet Basics - Learn about the Internet, web workings, IP addresses, DNS, and web browsers."
+    />
+    <meta
+      name="keywords"
+      content="HTML, web basics, internet, IP address, DNS, web browsers"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Chapter 1 – Introduction to Web & Internet Basics</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Chapter 1</li>
+        </ol>
+      </nav>
+
+      <h1>Chapter 1 – Introduction to Web & Internet Basics</h1>
+    </header>
+    <main id="main-content">
+      <img
+        src="images/internet.webp"
+        alt="The Internet - Global Network Connecting the World"
+        width="600"
+        height="300"
+      />
+
+      <section id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="#internet">What is the Internet?</a></li>
+          <li><a href="#data-transfer">How is data transferred?</a></li>
+          <li><a href="#ip-address">What is IP Address</a></li>
+          <li><a href="#website-access">How to access a website</a></li>
+          <li><a href="#ip-assignment">Who assigns the IP Address?</a></li>
+          <li><a href="#dns">Concept of DNS</a></li>
+          <li><a href="#dns-working">In-depth Working of DNS</a></li>
+          <li>
+            <a href="#data-problems"
+              >Problems in Data Transfer and MAC Address</a
+            >
+          </li>
+          <li><a href="#port-numbers">What is Port Numbers</a></li>
+          <li><a href="#ipv4-ipv6">IPv4 & IPv6</a></li>
+          <li><a href="#mac-format">MAC Address Format</a></li>
+          <li><a href="#port-format">Port Number Format</a></li>
+          <li>
+            <a href="#lan-network">Local Area Network, Switch & Router</a>
+          </li>
+          <li><a href="#public-private">Public and Private Addresses</a></li>
+          <li><a href="#modern-routers">Modern Routers</a></li>
+          <li><a href="#vpn">What is a VPN?</a></li>
+          <li><a href="#web-work">What is Web Development?</a></li>
+          <li><a href="#mern-stack">What is the MERN Stack?</a></li>
+          <li><a href="#full-stack">Who is a Full-Stack Developer?</a></li>
+          <li><a href="#browsers">Web Browsers</a></li>
+          <li><a href="#html-history">HTML History</a></li>
+          <li><a href="#key-concepts">Key Concepts Summary</a></li>
+        </ul>
+        <hr />
+      </section>
+      <section id="internet">
+        <h2>What is the Internet?</h2>
+
+        <p>
+          The Internet is a global network connecting millions of computers for
+          communication and data sharing. It allows devices worldwide to connect
+          and exchange information.
+        </p>
+      </section>
+
+      <hr />
+
+      <section id="data-transfer">
+        <h2>How is data transferred?</h2>
+
+        <p>
+          Data transfer on the internet occurs through packets. When you send
+          data (like an email or load a webpage), it's broken into small packets
+          that travel through various network devices to reach their
+          destination. These packets are then reassembled at the receiving end.
+        </p>
+
+        <p>The process involves:</p>
+
+        <ul>
+          <li>
+            <strong>Packet Creation:</strong> Data is divided into packets with
+            headers containing destination information
+          </li>
+          <li>
+            <strong>Routing:</strong> Packets travel through routers and
+            switches to find the best path
+          </li>
+          <li>
+            <strong>Transmission:</strong> Packets move through cables, wireless
+            networks, or fiber optics
+          </li>
+          <li>
+            <strong>Reassembly:</strong> Packets are put back together at the
+            destination
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section id="website-access">
+        <h2>How to access a website</h2>
+
+        <p>To access a website, you need to:</p>
+
+        <ol>
+          <li>
+            <strong>Enter URL:</strong> Type the website address (like
+            www.example.com) in your browser
+          </li>
+          <li>
+            <strong>DNS Resolution:</strong> Your computer contacts DNS servers
+            to convert the domain name to an IP address
+          </li>
+          <li>
+            <strong>Connection:</strong> Browser establishes a connection with
+            the web server using the IP address
+          </li>
+          <li>
+            <strong>Request:</strong> Browser sends an HTTP/HTTPS request for
+            the webpage
+          </li>
+          <li>
+            <strong>Response:</strong> Server sends back the HTML, CSS,
+            JavaScript, and other files
+          </li>
+          <li>
+            <strong>Rendering:</strong> Browser interprets and displays the
+            webpage
+          </li>
+        </ol>
+      </section>
+
+      <hr />
+
+      <section id="ip-assignment">
+        <h2>Who assigns the IP Address?</h2>
+
+        <p>IP addresses are assigned by:</p>
+
+        <ul>
+          <li>
+            <strong>Internet Service Providers (ISPs):</strong> Assign dynamic
+            IP addresses to home users
+          </li>
+          <li>
+            <strong>Network Administrators:</strong> Assign static IP addresses
+            in corporate networks
+          </li>
+          <li>
+            <strong>DHCP Servers:</strong> Automatically assign IP addresses
+            from a pool
+          </li>
+          <li>
+            <strong>IANA (Internet Assigned Numbers Authority):</strong>
+            Allocates IP address blocks to regional registries
+          </li>
+          <li>
+            <strong>Regional Registries:</strong> ARIN (Americas), RIPE
+            (Europe), APNIC (Asia-Pacific), etc.
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section id="dns-working">
+        <h2>In-depth Working of DNS</h2>
+        <p>DNS works through a hierarchical system:</p>
+        <ol>
+          <li>
+            <strong>Root Servers:</strong> 13 root servers worldwide that know
+            about top-level domains
+          </li>
+          <li>
+            <strong>TLD Servers:</strong> Handle specific top-level domains
+            (.com, .org, .net, etc.)
+          </li>
+          <li>
+            <strong>Authoritative Servers:</strong> Contain the actual DNS
+            records for domains
+          </li>
+          <li>
+            <strong>Recursive Resolvers:</strong> Your ISP's DNS servers that do
+            the actual lookups
+          </li>
+        </ol>
+        <p>When you type a domain name:</p>
+        <ul>
+          <li>Browser checks local DNS cache</li>
+          <li>Contacts recursive resolver (usually your ISP)</li>
+          <li>Resolver queries root servers for TLD information</li>
+          <li>Queries TLD servers for authoritative servers</li>
+          <li>Queries authoritative servers for the IP address</li>
+          <li>IP address is cached and returned to browser</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="data-problems">
+        <h2>Problems in Data Transfer and MAC Address</h2>
+        <p>Common data transfer problems include:</p>
+        <ul>
+          <li>
+            <strong>Packet Loss:</strong> Packets can be lost due to network
+            congestion or errors
+          </li>
+          <li><strong>Latency:</strong> Delay in packet transmission</li>
+          <li><strong>Jitter:</strong> Variation in packet arrival times</li>
+          <li>
+            <strong>Corruption:</strong> Data can be corrupted during
+            transmission
+          </li>
+        </ul>
+        <p>
+          <strong>MAC Address:</strong> Media Access Control address is a unique
+          identifier assigned to network interfaces. It's a 48-bit (6-byte)
+          address typically expressed in hexadecimal format.
+        </p>
+        <p>MAC addresses are used for:</p>
+        <ul>
+          <li>Local network communication within the same LAN</li>
+          <li>Switching decisions in network switches</li>
+          <li>Network interface identification</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="port-numbers">
+        <h2>What is Port Numbers</h2>
+        <p>
+          Port numbers are 16-bit numbers (0-65535) that identify specific
+          applications or services running on a device. They allow multiple
+          applications to use network services simultaneously.
+        </p>
+        <p><strong>Common Port Numbers:</strong></p>
+        <ul>
+          <li>Port 80: HTTP (web traffic)</li>
+          <li>Port 443: HTTPS (secure web traffic)</li>
+          <li>Port 21: FTP (file transfer)</li>
+          <li>Port 25: SMTP (email)</li>
+          <li>Port 53: DNS (domain name system)</li>
+          <li>Port 22: SSH (secure shell)</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="ipv4-ipv6">
+        <h2>IPv4 & IPv6</h2>
+        <p>
+          <strong>IPv4:</strong> Internet Protocol version 4 uses 32-bit
+          addresses (4 bytes) in dotted decimal format (e.g., 192.168.1.1). It
+          provides about 4.3 billion unique addresses.
+        </p>
+        <p>
+          <strong>IPv6:</strong> Internet Protocol version 6 uses 128-bit
+          addresses (16 bytes) in hexadecimal format (e.g.,
+          2001:0db8:85a3:0000:0000:8a2e:0370:7334). It provides approximately
+          340 undecillion unique addresses.
+        </p>
+        <p><strong>Key Differences:</strong></p>
+        <ul>
+          <li>IPv4: 32-bit, 4.3 billion addresses</li>
+          <li>IPv6: 128-bit, virtually unlimited addresses</li>
+          <li>IPv6 includes built-in security features</li>
+          <li>IPv6 has improved auto-configuration</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="mac-format">
+        <h2>MAC Address Format</h2>
+        <p>
+          MAC addresses are 48 bits (6 bytes) long and are typically represented
+          in hexadecimal format with colons or hyphens separating each byte.
+        </p>
+        <p><strong>Format Examples:</strong></p>
+        <ul>
+          <li>Colon notation: 00:1B:44:11:3A:B7</li>
+          <li>Hyphen notation: 00-1B-44-11-3A-B7</li>
+          <li>Dot notation: 001B.4411.3AB7</li>
+        </ul>
+        <p><strong>MAC Address Structure:</strong></p>
+        <ul>
+          <li>First 24 bits: Organizationally Unique Identifier (OUI)</li>
+          <li>Last 24 bits: Network Interface Controller (NIC) specific</li>
+          <li>First bit: Indicates unicast (0) or multicast (1)</li>
+          <li>
+            Second bit: Indicates globally unique (0) or locally administered
+            (1)
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section id="port-format">
+        <h2>Port Number Format</h2>
+        <p>
+          Port numbers are 16-bit unsigned integers ranging from 0 to 65535.
+        </p>
+        <p><strong>Port Number Ranges:</strong></p>
+        <ul>
+          <li>0-1023: Well-known ports (system ports)</li>
+          <li>1024-49151: Registered ports</li>
+          <li>49152-65535: Dynamic/private ports</li>
+        </ul>
+        <p><strong>Port Number Examples:</strong></p>
+        <table>
+          <tr>
+            <th>Port</th>
+            <th>Protocol</th>
+            <th>Service</th>
+          </tr>
+          <tr>
+            <td>80</td>
+            <td>TCP</td>
+            <td>HTTP</td>
+          </tr>
+          <tr>
+            <td>443</td>
+            <td>TCP</td>
+            <td>HTTPS</td>
+          </tr>
+          <tr>
+            <td>53</td>
+            <td>UDP/TCP</td>
+            <td>DNS</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+      <section id="lan-network">
+        <h2>Local Area Network, Switch & Router</h2>
+        <p>
+          <strong>Local Area Network (LAN):</strong> A network that connects
+          computers and devices in a limited geographical area like a home,
+          school, or office building.
+        </p>
+        <p>
+          <strong>Network Switch:</strong> A device that connects multiple
+          devices on a computer network. It uses MAC addresses to forward data
+          to the correct destination within the LAN.
+        </p>
+        <p>
+          <strong>Router:</strong> A device that connects multiple networks
+          together. It routes data packets between different networks using IP
+          addresses.
+        </p>
+        <p><strong>Key Differences:</strong></p>
+        <ul>
+          <li>Switch operates at Layer 2 (Data Link) using MAC addresses</li>
+          <li>Router operates at Layer 3 (Network) using IP addresses</li>
+          <li>Switch creates separate collision domains</li>
+          <li>Router creates separate broadcast domains</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="public-private">
+        <h2>Public and Private Addresses</h2>
+        <p>
+          <strong>Public IP Addresses:</strong> Globally unique IP addresses
+          assigned by ISPs that can be accessed from anywhere on the internet.
+        </p>
+        <p>
+          <strong>Private IP Addresses:</strong> IP addresses used within
+          private networks that are not routable on the public internet.
+        </p>
+        <p><strong>Private IP Address Ranges:</strong></p>
+        <ul>
+          <li>10.0.0.0 - 10.255.255.255 (Class A)</li>
+          <li>172.16.0.0 - 172.31.255.255 (Class B)</li>
+          <li>192.168.0.0 - 192.168.255.255 (Class C)</li>
+        </ul>
+        <p>
+          Network Address Translation (NAT) allows multiple devices on a private
+          network to share a single public IP address.
+        </p>
+      </section>
+      <hr />
+      <section id="modern-routers">
+        <h2>Modern Routers</h2>
+        <p>Modern routers combine multiple functions:</p>
+        <ul>
+          <li>
+            <strong>Routing:</strong> Forwarding data packets between networks
+          </li>
+          <li><strong>Switching:</strong> Connecting devices within a LAN</li>
+          <li>
+            <strong>NAT:</strong> Network Address Translation for IP sharing
+          </li>
+          <li>
+            <strong>DHCP:</strong> Dynamic Host Configuration Protocol for IP
+            assignment
+          </li>
+          <li>
+            <strong>Firewall:</strong> Security features to protect the network
+          </li>
+          <li><strong>Wi-Fi:</strong> Wireless access point functionality</li>
+          <li>
+            <strong>VPN Server:</strong> Virtual Private Network capabilities
+          </li>
+        </ul>
+        <p>
+          Modern routers often include parental controls, Quality of Service
+          (QoS), and guest network features.
+        </p>
+      </section>
+      <hr />
+      <section id="vpn">
+        <h2>What is a VPN?</h2>
+        <p>
+          <strong>VPN (Virtual Private Network):</strong> A technology that
+          creates a secure, encrypted connection over a less secure network,
+          such as the internet.
+        </p>
+        <p><strong>How VPN Works:</strong></p>
+        <ol>
+          <li>User connects to VPN server</li>
+          <li>Authentication occurs</li>
+          <li>Encrypted tunnel is established</li>
+          <li>All internet traffic is routed through the VPN</li>
+          <li>Data appears to come from the VPN server's IP address</li>
+        </ol>
+        <p><strong>VPN Benefits:</strong></p>
+        <ul>
+          <li>Enhanced security and privacy</li>
+          <li>Bypassing geo-restrictions</li>
+          <li>Access to corporate networks remotely</li>
+          <li>Protection on public Wi-Fi</li>
+          <li>Anonymity online</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="web-work">
+        <h2>What is Web Development?</h2>
+        <p>
+          Web development is the process of creating websites and web
+          applications that run on the internet. It involves:
+        </p>
+        <ul>
+          <li>
+            <strong>Frontend Development:</strong> Creating the user interface
+            and user experience
+          </li>
+          <li>
+            <strong>Backend Development:</strong> Server-side logic and database
+            management
+          </li>
+          <li>
+            <strong>Full-Stack Development:</strong> Both frontend and backend
+            development
+          </li>
+        </ul>
+        <p><strong>Web Development Technologies:</strong></p>
+        <ul>
+          <li>HTML, CSS, JavaScript (Frontend)</li>
+          <li>Node.js, Python, PHP, Ruby (Backend)</li>
+          <li>React, Angular, Vue.js (Frontend Frameworks)</li>
+          <li>MongoDB, MySQL, PostgreSQL (Databases)</li>
+        </ul>
+        <h3>Basic HTML Structure Example</h3>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;My First Webpage&lt;/title&gt;
+  &lt;style&gt;body{font-family:Arial,sans-serif;margin:20px;}h1{color:#333;}p{color:#666;}&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Hello, World!&lt;/h1&gt;
+  &lt;p&gt;This is my first webpage.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;"
+          width="100%"
+          height="200"
+          frameborder="1"
+          title="Basic HTML Structure Preview"
+        ></iframe>
+      </section>
+      <hr />
+      <section id="mern-stack">
+        <h2>What is the MERN Stack?</h2>
+        <p>
+          <strong>MERN Stack:</strong> A popular full-stack JavaScript framework
+          for building web applications.
+        </p>
+        <p><strong>MERN Components:</strong></p>
+        <ul>
+          <li><strong>MongoDB:</strong> NoSQL database for storing data</li>
+          <li>
+            <strong>Express.js:</strong> Backend web application framework for
+            Node.js
+          </li>
+          <li>
+            <strong>React:</strong> Frontend JavaScript library for building
+            user interfaces
+          </li>
+          <li>
+            <strong>Node.js:</strong> JavaScript runtime environment for
+            server-side development
+          </li>
+        </ul>
+        <p><strong>MERN Stack Advantages:</strong></p>
+        <ul>
+          <li>All components use JavaScript</li>
+          <li>Single language throughout the stack</li>
+          <li>Large community and ecosystem</li>
+          <li>Fast development and deployment</li>
+          <li>Scalable and flexible architecture</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="full-stack">
+        <h2>Who is a Full-Stack Developer?</h2>
+        <p>
+          <strong>Full-Stack Developer:</strong> A developer who works on both
+          the frontend and backend of web applications.
+        </p>
+        <p><strong>Responsibilities:</strong></p>
+        <ul>
+          <li>Designing user interfaces and user experiences</li>
+          <li>Developing client-side and server-side logic</li>
+          <li>Working with databases and APIs</li>
+          <li>Managing deployment and hosting</li>
+          <li>Ensuring application performance and security</li>
+        </ul>
+        <p><strong>Skills Required:</strong></p>
+        <ul>
+          <li>HTML, CSS, JavaScript</li>
+          <li>Frontend frameworks (React, Angular, Vue)</li>
+          <li>Backend languages (Node.js, Python, PHP)</li>
+          <li>Database management (SQL, MongoDB)</li>
+          <li>Version control (Git)</li>
+          <li>API development and integration</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="key-concepts">
+        <h2>Key Concepts Summary</h2>
+        <table>
+          <tr>
+            <th>Topic</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Internet</td>
+            <td>
+              A global network connecting millions of computers for
+              communication and data sharing.
+            </td>
+          </tr>
+          <tr>
+            <td>Web Basics</td>
+            <td>
+              Interconnected documents and resources accessible via the
+              Internet.
+            </td>
+          </tr>
+          <tr>
+            <td>IP Address</td>
+            <td>A unique number assigned to each device on the network.</td>
+          </tr>
+          <tr>
+            <td>DNS</td>
+            <td>Domain Name System translates domain names to IP addresses.</td>
+          </tr>
+          <tr>
+            <td>Web Browsers</td>
+            <td>Applications that read HTML and display web pages.</td>
+          </tr>
+        </table>
+      </section>
+    </main>
+
+    <section id="chapter-summary">
+      <h2>Chapter 1 Summary</h2>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>
+          <strong>The Internet</strong> is a global network of computers that
+          communicate using standardized protocols
+        </li>
+        <li>
+          <strong>IP Addresses</strong> are unique numerical identifiers
+          assigned to devices on a network
+        </li>
+        <li>
+          <strong>DNS (Domain Name System)</strong> translates human-readable
+          domain names into IP addresses
+        </li>
+        <li>
+          <strong>Web Browsers</strong> are software applications that retrieve
+          and display web content
+        </li>
+        <li>
+          <strong>HTTP/HTTPS</strong> are protocols used for transferring web
+          content between servers and browsers
+        </li>
+        <li>
+          <strong>URLs</strong> (Uniform Resource Locators) are addresses used
+          to locate resources on the web
+        </li>
+      </ul>
+
+      <h3>What You Learned</h3>
+      <p>
+        In this chapter, you explored the foundational concepts of the World
+        Wide Web:
+      </p>
+      <ul>
+        <li>How the internet works as a network of interconnected computers</li>
+        <li>The role of IP addresses in identifying devices</li>
+        <li>How DNS translates domain names to IP addresses</li>
+        <li>The function of web browsers in displaying web content</li>
+        <li>The difference between HTTP and HTTPS protocols</li>
+        <li>How URLs structure web addresses</li>
+      </ul>
+
+      <h3>Next Steps</h3>
+      <p>
+        Now that you understand the web's infrastructure, you're ready to learn
+        HTML - the language used to create web content. In
+        <a href="chapter2.html">Chapter 2</a>, you'll discover:
+      </p>
+      <ul>
+        <li>What HTML is and why it's important</li>
+        <li>Basic HTML document structure</li>
+        <li>Common HTML elements and tags</li>
+        <li>How to create your first HTML page</li>
+      </ul>
+
+      <h3>Practice What You've Learned</h3>
+      <ul>
+        <li>Visit a website and examine its URL structure</li>
+        <li>
+          Research what happens when you type a domain name into your browser
+        </li>
+        <li>Compare HTTP vs HTTPS websites and note the differences</li>
+        <li>Explore different web browsers and their features</li>
+      </ul>
+
+      <aside>
+        <h4>💡 Pro Tip</h4>
+        <p>
+          Understanding these web fundamentals will help you better comprehend
+          how HTML fits into the larger web ecosystem. This knowledge becomes
+          especially valuable when you start working with links, images, and
+          other web resources in future chapters.
+        </p>
+      </aside>
+
+      <p>
+        <strong>Ready for the next chapter?</strong>
+        <a href="chapter2.html">Continue to Chapter 2 →</a>
+      </p>
+    </section>
+
+    <hr />
+    <h3>Reference Video for Chapter 1</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/1pcikNlDB-4"
+      title="Chapter 1 Reference Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <hr />
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html>

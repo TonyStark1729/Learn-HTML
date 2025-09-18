@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chapter 2: Basics of HTML - Learn about HTML documents, headings, paragraphs, links, images, and more."
+    />
+    <meta
+      name="keywords"
+      content="HTML, basics, headings, paragraphs, links, images"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Chapter 2 – Basics of HTML</title>
+  </head>
+  <body>
+    <a href="#top" class="skip-link">Skip to main content</a>
+    <header id="top">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Chapter 2</li>
+        </ol>
+      </nav>
+
+      <h1>Chapter 2 – Basics of HTML</h1>
+    </header>
+    <main id="main-content">
+      <section id="toc">
+        <h2>Table of Contents</h2>
+        <ul>
+          <li><a href="#html-definition">What is HTML?</a></li>
+          <li><a href="#first-website">World First Website</a></li>
+          <li><a href="#hyperlinks-concept">The Concept of Hyperlinks</a></li>
+          <li><a href="#markup-language">What is a Markup Language?</a></li>
+          <li><a href="#understanding-tags">Understanding Tags</a></li>
+          <li><a href="#heading-concept">What is Heading</a></li>
+          <li>
+            <a href="#paragraph-quick">What is Paragraph Tag (Quick Example)</a>
+          </li>
+          <li><a href="#heading-types">Types of Heading Tags</a></li>
+          <li><a href="#paragraph-tag">The Paragraph Tag</a></li>
+          <li><a href="#element-concept">What is an Element?</a></li>
+          <li><a href="#horizontal-rule">Horizontal Rule (hr)</a></li>
+          <li><a href="#line-break">Line Break (br)</a></li>
+          <li><a href="#lists-intro">Introduction to HTML Lists</a></li>
+          <li>
+            <a href="#list-types">Types of Lists (Ordered & Unordered)</a>
+          </li>
+          <li><a href="#creating-links">Creating Hyperlinks</a></li>
+          <li><a href="#comments">Adding Comments in HTML</a></li>
+          <li><a href="#anchor-tag">The Anchor Tag (a)</a></li>
+          <li><a href="#attributes">Attributes Explained</a></li>
+          <li><a href="#adding-images">Adding Images (img)</a></li>
+          <li><a href="#image-maps">Image Maps (Clickable Images)</a></li>
+          <li><a href="#documents">HTML Documents</a></li>
+          <li><a href="#doctype">The &lt;!DOCTYPE&gt; Declaration</a></li>
+          <li><a href="#headings">HTML Headings</a></li>
+          <li><a href="#paragraphs">HTML Paragraphs</a></li>
+          <li><a href="#links">HTML Links</a></li>
+          <li><a href="#images">HTML Images</a></li>
+          <li><a href="#source">How to View HTML Source</a></li>
+        </ul>
+      </section>
+      <hr />
+      <section id="html-definition">
+        <h2>What is HTML?</h2>
+
+        <p>
+          <strong>HTML (HyperText Markup Language)</strong> is the standard
+          markup language used to create web pages. It describes the structure
+          of a web page and consists of a series of elements that tell the
+          browser how to display the content.
+        </p>
+
+        <p>
+          HTML is not a programming language, but rather a markup language that
+          defines the structure and layout of web documents.
+        </p>
+
+        <h3>Key Points about HTML:</h3>
+
+        <ul>
+          <li>HTML stands for HyperText Markup Language</li>
+          <li>HTML describes the structure of web pages</li>
+          <li>HTML consists of a series of elements</li>
+          <li>HTML elements tell the browser how to display content</li>
+          <li>HTML elements are represented by tags</li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="first-website">
+        <h2>World First Website</h2>
+
+        <p>
+          The world's first website was created by
+          <strong>Tim Berners-Lee</strong> in 1991. It was hosted on the NeXT
+          computer at CERN (European Organization for Nuclear Research) in
+          Switzerland.
+        </p>
+
+        <p>The first website was very simple and contained:</p>
+
+        <ul>
+          <li>Information about the World Wide Web project</li>
+          <li>A list of people working on the project</li>
+          <li>Links to other pages with more information</li>
+          <li>A simple text-based interface</li>
+        </ul>
+
+        <p>
+          The original URL was:
+          <code>http://info.cern.ch/hypertext/WWW/TheProject.html</code>
+        </p>
+
+        <p>
+          This marked the beginning of the modern World Wide Web as we know it
+          today.
+        </p>
+      </section>
+      <hr />
+      <section id="hyperlinks-concept">
+        <h2>The Concept of Hyperlinks</h2>
+        <p>
+          <strong>Hyperlinks</strong> are fundamental to the web. They allow
+          users to navigate between different web pages and resources by simply
+          clicking on text or images.
+        </p>
+        <p>Hyperlinks can:</p>
+        <ul>
+          <li>Link to other web pages</li>
+          <li>Link to different sections on the same page</li>
+          <li>Link to files for download</li>
+          <li>Link to email addresses</li>
+          <li>Open new browser tabs or windows</li>
+        </ul>
+        <p>
+          The concept of hyperlinks was invented by Tim Berners-Lee and is what
+          makes the web "hypertext" - text that is connected in non-linear ways.
+        </p>
+      </section>
+      <hr />
+      <section id="markup-language">
+        <h2>What is a Markup Language?</h2>
+        <p>
+          A <strong>markup language</strong> is a system for annotating text to
+          define its structure and presentation. It uses tags to mark up the
+          content.
+        </p>
+        <p>Key characteristics of markup languages:</p>
+        <ul>
+          <li>Use tags to define document structure</li>
+          <li>Separate content from presentation</li>
+          <li>Are human-readable</li>
+          <li>Can be processed by computers</li>
+          <li>Follow specific syntax rules</li>
+        </ul>
+        <p>
+          HTML is a markup language, while programming languages like JavaScript
+          are used for functionality and logic.
+        </p>
+      </section>
+      <hr />
+      <section id="understanding-tags">
+        <h2>Understanding Tags</h2>
+        <p>
+          <strong>Tags</strong> are the building blocks of HTML. They are
+          keywords enclosed in angle brackets that define HTML elements.
+        </p>
+        <h3>Types of Tags:</h3>
+        <ul>
+          <li><strong>Opening tags:</strong> &lt;tagname&gt;</li>
+          <li><strong>Closing tags:</strong> &lt;/tagname&gt;</li>
+          <li><strong>Self-closing tags:</strong> &lt;tagname /&gt;</li>
+          <li>
+            <strong>Void elements:</strong> Tags that don't need closing (like
+            &lt;br&gt;, &lt;img&gt;)
+          </li>
+        </ul>
+        <h3>Example:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;This is a paragraph with &lt;strong&gt;strong&lt;/strong&gt; text.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="60"
+            frameborder="1"
+            title="Tags Example Preview"
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="heading-concept">
+        <h2>What is Heading</h2>
+        <p>
+          <strong>Headings</strong> are used to define the hierarchy and
+          structure of your content. They create a document outline that helps
+          both users and search engines understand the content structure.
+        </p>
+        <p>Headings are important for:</p>
+        <ul>
+          <li>Creating a logical document structure</li>
+          <li>Improving accessibility for screen readers</li>
+          <li>SEO (Search Engine Optimization)</li>
+          <li>Visual hierarchy on the page</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="paragraph-quick">
+        <h2>What is Paragraph Tag (Quick Example)</h2>
+        <p>
+          The <strong>&lt;p&gt; tag</strong> defines a paragraph in HTML. It
+          automatically adds space before and after the paragraph content.
+        </p>
+        <h3>Quick Example:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;p&gt;This is my second paragraph.&lt;/p&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;This is my first paragraph.&lt;/p&gt;&lt;p&gt;This is my second paragraph.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="100"
+            frameborder="1"
+            title="Paragraph Tag Example Preview"
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="heading-types">
+        <h2>Types of Heading Tags</h2>
+        <p>
+          HTML provides six levels of headings, from &lt;h1&gt; (most important)
+          to &lt;h6&gt; (least important).
+        </p>
+        <h3>Heading Hierarchy:</h3>
+        <ul>
+          <li>&lt;h1&gt; - Main heading (usually one per page)</li>
+          <li>&lt;h2&gt; - Major sections</li>
+          <li>&lt;h3&gt; - Subsections</li>
+          <li>&lt;h4&gt; - Minor subsections</li>
+          <li>&lt;h5&gt; - Small subsections</li>
+          <li>&lt;h6&gt; - Smallest subsections</li>
+        </ul>
+        <h3>Visual Example:</h3>
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;h1&gt;H1 - Main Title&lt;/h1&gt;&lt;h2&gt;H2 - Section Title&lt;/h2&gt;&lt;h3&gt;H3 - Subsection&lt;/h3&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="120"
+          frameborder="1"
+          title="Heading Types Example Preview"
+        ></iframe>
+      </section>
+      <hr />
+      <section id="paragraph-tag">
+        <h2>The Paragraph Tag</h2>
+        <p>
+          The &lt;p&gt; tag is one of the most commonly used HTML elements. It
+          defines a paragraph of text.
+        </p>
+        <h3>Characteristics:</h3>
+        <ul>
+          <li>Block-level element</li>
+          <li>Automatically adds margin above and below</li>
+          <li>Can contain inline elements</li>
+          <li>Supports global attributes</li>
+        </ul>
+        <h3>Advanced Usage:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;p&gt;This is a &lt;strong&gt;bold&lt;/strong&gt; word in a paragraph.&lt;/p&gt;
+&lt;p&gt;You can also use &lt;em&gt;emphasis&lt;/em&gt; in paragraphs.&lt;/p&gt;</pre
+          >
+        </details>
+      </section>
+      <hr />
+      <section id="element-concept">
+        <h2>What is an Element?</h2>
+        <p>
+          An <strong>HTML element</strong> is a complete structure that consists
+          of an opening tag, content, and a closing tag (or just a self-closing
+          tag).
+        </p>
+        <h3>Element Structure:</h3>
+        <ul>
+          <li><strong>Opening tag:</strong> &lt;tagname&gt;</li>
+          <li><strong>Content:</strong> Text, other elements, or media</li>
+          <li><strong>Closing tag:</strong> &lt;/tagname&gt;</li>
+        </ul>
+        <h3>Examples:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;!-- Complete element --&gt;
+&lt;p&gt;This is a paragraph element.&lt;/p&gt;
+
+&lt;!-- Element with nested elements --&gt;
+&lt;div&gt;
+  &lt;h1&gt;Title&lt;/h1&gt;
+  &lt;p&gt;Content&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;!-- Self-closing element --&gt;
+&lt;img src="image.jpg" alt="Image" /&gt;</pre
+          >
+        </details>
+      </section>
+      <hr />
+      <section id="horizontal-rule">
+        <h2>Horizontal Rule (hr)</h2>
+        <p>
+          The &lt;hr&gt; tag creates a horizontal line that can be used to
+          separate content sections.
+        </p>
+        <h3>Usage:</h3>
+        <ul>
+          <li>Separate different sections of content</li>
+          <li>Create visual breaks in the page</li>
+          <li>Improve content organization</li>
+        </ul>
+        <h3>Example:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;p&gt;First section content&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Second section content&lt;/p&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;First section content&lt;/p&gt;&lt;hr&gt;&lt;p&gt;Second section content&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="100"
+            frameborder="1"
+            title="Horizontal Rule Example Preview"
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="line-break">
+        <h2>Line Break (br)</h2>
+        <p>
+          The &lt;br&gt; tag creates a line break within text content. It's a
+          self-closing tag.
+        </p>
+        <h3>When to use &lt;br&gt;:</h3>
+        <ul>
+          <li>Breaking lines in addresses</li>
+          <li>Creating line breaks in poems</li>
+          <li>Separating lines in contact information</li>
+        </ul>
+        <h3>Example:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;p&gt;
+  John Doe&lt;br&gt;
+  123 Main Street&lt;br&gt;
+  New York, NY 10001
+&lt;/p&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;John Doe&lt;br&gt;123 Main Street&lt;br&gt;New York, NY 10001&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="80"
+            frameborder="1"
+            title="Line Break Example Preview"
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="lists-intro">
+        <h2>Introduction to HTML Lists</h2>
+        <p>
+          HTML lists are used to group related items together. There are three
+          main types of lists in HTML:
+        </p>
+        <ul>
+          <li>
+            <strong>Unordered lists (&lt;ul&gt;):</strong> For items where order
+            doesn't matter
+          </li>
+          <li>
+            <strong>Ordered lists (&lt;ol&gt;):</strong> For items where order
+            matters
+          </li>
+          <li>
+            <strong>Description lists (&lt;dl&gt;):</strong> For terms and their
+            descriptions
+          </li>
+        </ul>
+        <p>
+          Lists help organize content and make it easier to read and understand.
+        </p>
+      </section>
+      <hr />
+      <section id="list-types">
+        <h2>Types of Lists (Ordered & Unordered)</h2>
+        <h3>Unordered Lists:</h3>
+        <p>
+          Use &lt;ul&gt; and &lt;li&gt; tags. Items are marked with bullets by
+          default.
+        </p>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;ul&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Tea&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+&lt;/ul&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;ul&gt;&lt;li&gt;Coffee&lt;/li&gt;&lt;li&gt;Tea&lt;/li&gt;&lt;li&gt;Milk&lt;/li&gt;&lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="100"
+            frameborder="1"
+            title="Unordered List Example Preview"
+          ></iframe>
+        </details>
+
+        <h3>Ordered Lists:</h3>
+        <p>
+          Use &lt;ol&gt; and &lt;li&gt; tags. Items are numbered by default.
+        </p>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;ol&gt;
+  &lt;li&gt;First item&lt;/li&gt;
+  &lt;li&gt;Second item&lt;/li&gt;
+  &lt;li&gt;Third item&lt;/li&gt;
+&lt;/ol&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;ol&gt;&lt;li&gt;First item&lt;/li&gt;&lt;li&gt;Second item&lt;/li&gt;&lt;li&gt;Third item&lt;/li&gt;&lt;/ol&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="100"
+            frameborder="1"
+            title="Ordered List Example Preview"
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="creating-links">
+        <h2>Creating Hyperlinks</h2>
+        <p>
+          Hyperlinks are created using the &lt;a&gt; (anchor) tag with the href
+          attribute.
+        </p>
+        <h3>Basic Link:</h3>
+        <pre>
+&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;a href='#'&gt;Visit Example&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="40"
+          frameborder="1"
+          title="Basic Link Example Preview"
+        ></iframe>
+
+        <h3>Different Types of Links:</h3>
+        <ul>
+          <li><strong>Absolute URLs:</strong> Full web addresses</li>
+          <li>
+            <strong>Relative URLs:</strong> Paths relative to current page
+          </li>
+          <li>
+            <strong>Anchor links:</strong> Links to sections on the same page
+          </li>
+          <li><strong>Email links:</strong> Open email client</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="comments">
+        <h2>Adding Comments in HTML</h2>
+        <p>
+          Comments are used to add notes or explanations in HTML code. They are
+          not displayed in the browser.
+        </p>
+        <h3>Comment Syntax:</h3>
+        <pre>&lt;!-- This is a comment --&gt;</pre>
+        <h3>Uses of Comments:</h3>
+        <ul>
+          <li>Explain complex code sections</li>
+          <li>Temporarily disable code</li>
+          <li>Add developer notes</li>
+          <li>Organize code structure</li>
+        </ul>
+        <h3>Example:</h3>
+        <pre>
+&lt;!-- Header section starts here --&gt;
+&lt;header&gt;
+  &lt;h1&gt;Website Title&lt;/h1&gt;
+&lt;/header&gt;
+&lt;!-- Header section ends --&gt;</pre
+        >
+      </section>
+      <hr />
+      <section id="anchor-tag">
+        <h2>The Anchor Tag (a)</h2>
+        <p>
+          The &lt;a&gt; tag defines a hyperlink, which is used to link from one
+          page to another.
+        </p>
+        <h3>Important Attributes:</h3>
+        <ul>
+          <li>
+            <strong>href:</strong> Specifies the URL of the page to link to
+          </li>
+          <li>
+            <strong>target:</strong> Specifies where to open the link (_blank,
+            _self, etc.)
+          </li>
+          <li>
+            <strong>title:</strong> Provides additional information about the
+            link
+          </li>
+          <li>
+            <strong>rel:</strong> Defines the relationship between current and
+            linked document
+          </li>
+        </ul>
+        <h3>Advanced Example:</h3>
+        <pre>
+&lt;a href="https://www.example.com" target="_blank" title="Visit Example Website"&gt;Example&lt;/a&gt;</pre
+        >
+      </section>
+      <hr />
+      <section id="attributes">
+        <h2>Attributes Explained</h2>
+        <p>
+          <strong>Attributes</strong> provide additional information about HTML
+          elements. They are always specified in the opening tag.
+        </p>
+        <h3>Attribute Syntax:</h3>
+        <pre>&lt;tagname attribute="value"&gt;Content&lt;/tagname&gt;</pre>
+        <h3>Types of Attributes:</h3>
+        <ul>
+          <li>
+            <strong>Required attributes:</strong> Must be present for the
+            element to work
+          </li>
+          <li>
+            <strong>Optional attributes:</strong> Provide additional
+            functionality
+          </li>
+          <li>
+            <strong>Standard attributes:</strong> Can be used with most elements
+          </li>
+          <li>
+            <strong>Event attributes:</strong> Define actions when events occur
+          </li>
+        </ul>
+        <h3>Common Attributes:</h3>
+        <table>
+          <tr>
+            <th>Attribute</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>id</td>
+            <td>Unique identifier</td>
+            <td>id="header"</td>
+          </tr>
+          <tr>
+            <td>class</td>
+            <td>Class name for styling</td>
+            <td>class="button"</td>
+          </tr>
+          <tr>
+            <td>style</td>
+            <td>Inline CSS styles</td>
+            <td>style</td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>Tooltip text</td>
+            <td>title="Click here"</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+      <section id="adding-images">
+        <h2>Adding Images (img)</h2>
+        <p>
+          The &lt;img&gt; tag is used to embed images in HTML pages. It's a
+          self-closing tag.
+        </p>
+        <h3>Essential Attributes:</h3>
+        <ul>
+          <li><strong>src:</strong> Specifies the path to the image file</li>
+          <li>
+            <strong>alt:</strong> Provides alternative text for accessibility
+          </li>
+          <li><strong>width:</strong> Sets the image width</li>
+          <li><strong>height:</strong> Sets the image height</li>
+        </ul>
+        <h3>Example:</h3>
+        <h3>Local Image Example:</h3>
+        <p>Here's an example using a local image from our images folder:</p>
+        <pre><code>&lt;img src="images/cat.jpg" alt="Image of a cat" width="300" height="200"&gt;</code></pre>
+        <img
+          src="images/cat.jpg"
+          alt="Image of a cat"
+          width="300"
+          height="200"
+        />
+      </section>
+      <hr />
+      <section id="image-maps">
+        <h2>Image Maps (Clickable Images)</h2>
+        <p>
+          Image maps allow you to create clickable areas within an image that
+          can link to different pages or perform different actions. This is
+          useful for creating interactive diagrams, navigation menus, or
+          detailed maps.
+        </p>
+
+        <h3>How Image Maps Work:</h3>
+        <ul>
+          <li>
+            The &lt;img&gt; tag uses a <strong>usemap</strong> attribute to
+            reference a map
+          </li>
+          <li>The &lt;map&gt; element defines the clickable areas</li>
+          <li>
+            The &lt;area&gt; elements define each clickable region within the
+            map
+          </li>
+        </ul>
+
+        <h3>Area Shape Options:</h3>
+        <ul>
+          <li><strong>rect:</strong> Rectangular area (coords: x1,y1,x2,y2)</li>
+          <li>
+            <strong>circle:</strong> Circular area (coords:
+            center-x,center-y,radius)
+          </li>
+          <li>
+            <strong>poly:</strong> Polygonal area (coords:
+            x1,y1,x2,y2,x3,y3,...)
+          </li>
+        </ul>
+
+        <h3>Example: Interactive Desk Image</h3>
+        <p>Click on different parts of the desk image below:</p>
+
+        <img
+          src="images/desk.jpg"
+          alt="Interactive Desk"
+          width="400"
+          height="300"
+          usemap="#deskmap"
+        />
+
+        <map name="deskmap">
+          <area
+            shape="rect"
+            coords="50,50,150,120"
+            href="#computer"
+            alt="Computer"
+            title="Click for computer info"
+          />
+          <area
+            shape="rect"
+            coords="200,80,300,140"
+            href="#books"
+            alt="Books"
+            title="Click for books info"
+          />
+          <area
+            shape="rect"
+            coords="320,180,380,220"
+            href="#lamp"
+            alt="Lamp"
+            title="Click for lamp info"
+          />
+          <area
+            shape="circle"
+            coords="100,200,30"
+            href="#drawer"
+            alt="Drawer"
+            title="Click for drawer info"
+          />
+        </map>
+
+        <h4>HTML Code:</h4>
+        <pre><code>&lt;img src="images/desk.jpg" alt="Interactive Desk" width="400" height="300" usemap="#deskmap"&gt;
+
+&lt;map name="deskmap"&gt;
+  &lt;area shape="rect" coords="50,50,150,120" href="#computer" alt="Computer" title="Click for computer info"&gt;
+  &lt;area shape="rect" coords="200,80,300,140" href="#books" alt="Books" title="Click for books info"&gt;
+  &lt;area shape="rect" coords="320,180,380,220" href="#lamp" alt="Lamp" title="Click for lamp info"&gt;
+  &lt;area shape="circle" coords="100,200,30" href="#drawer" alt="Drawer" title="Click for drawer info"&gt;
+&lt;/map&gt;</code></pre>
+
+        <h4>Interactive Areas:</h4>
+        <ul>
+          <li id="computer">
+            <strong>Computer Area:</strong> Rectangle from (50,50) to (150,120)
+          </li>
+          <li id="books">
+            <strong>Books Area:</strong> Rectangle from (200,80) to (300,140)
+          </li>
+          <li id="lamp">
+            <strong>Lamp Area:</strong> Rectangle from (320,180) to (380,220)
+          </li>
+          <li id="drawer">
+            <strong>Drawer Area:</strong> Circle at (100,200) with radius 30
+          </li>
+        </ul>
+
+        <h4>Practical Uses:</h4>
+        <ul>
+          <li>Interactive floor plans</li>
+          <li>Product diagrams with clickable parts</li>
+          <li>Geographic maps</li>
+          <li>Navigation menus</li>
+          <li>Educational diagrams</li>
+        </ul>
+
+        <div class="note">
+          <p>
+            <strong>Note:</strong> Coordinates are measured in pixels from the
+            top-left corner of the image (0,0). You can use image editing tools
+            to determine the exact coordinates for your clickable areas.
+          </p>
+        </div>
+      </section>
+      <hr />
+      <section id="documents">
+        <h2>HTML Documents</h2>
+        <p>
+          All HTML documents must start with a document type declaration:
+          &lt;!DOCTYPE html&gt;.
+        </p>
+        <p>
+          The HTML document itself begins with &lt;html&gt; and ends with
+          &lt;/html&gt;.
+        </p>
+        <p>
+          The visible part of the HTML document is between &lt;body&gt; and
+          &lt;/body&gt;.
+        </p>
+        <h3>Example</h3>
+        <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;My First Heading&lt;/h1&gt;
+&lt;p&gt;My first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre
+        >
+      </section>
+      <hr />
+      <section id="doctype">
+        <h2>The &lt;!DOCTYPE&gt; Declaration</h2>
+        <p>
+          The &lt;!DOCTYPE&gt; declaration represents the document type, and
+          helps browsers to display web pages correctly.
+        </p>
+        <p>
+          It must only appear once, at the top of the page (before any HTML
+          tags).
+        </p>
+        <p>The &lt;!DOCTYPE&gt; declaration is not case sensitive.</p>
+        <p>
+          The &lt;!DOCTYPE&gt; declaration for HTML5 is: &lt;!DOCTYPE html&gt;
+        </p>
+      </section>
+      <hr />
+      <section id="headings">
+        <h2>HTML Headings</h2>
+        <p>HTML headings are defined with the &lt;h1&gt; to &lt;h6&gt; tags.</p>
+        <p>
+          &lt;h1&gt; defines the most important heading. &lt;h6&gt; defines the
+          least important heading.
+        </p>
+        <h3>Example</h3>
+        <pre>
+&lt;h1&gt;This is heading 1&lt;/h1&gt;
+&lt;h2&gt;This is heading 2&lt;/h2&gt;
+&lt;h3&gt;This is heading 3&lt;/h3&gt;</pre
+        >
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6>
+      </section>
+      <hr />
+      <section id="paragraphs">
+        <h2>HTML Paragraphs</h2>
+        <p>HTML paragraphs are defined with the &lt;p&gt; tag.</p>
+        <h3>Example</h3>
+        <pre>
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This is another paragraph.&lt;/p&gt;</pre
+        >
+        <p>
+          This is a paragraph. HTML paragraphs are defined with the &lt;p&gt;
+          tag.
+        </p>
+      </section>
+      <hr />
+      <section id="links">
+        <h2>HTML Links</h2>
+        <p>HTML links are defined with the &lt;a&gt; tag.</p>
+        <p>The link's destination is specified in the href attribute.</p>
+        <h3>Example</h3>
+        <pre>
+&lt;a href="https://www.w3schools.com"&gt;This is a link&lt;/a&gt;</pre
+        >
+        <p>
+          Visit
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+            >MDN HTML Docs</a
+          >
+          for more info.
+        </p>
+      </section>
+      <hr />
+      <section id="images">
+        <h2>HTML Images</h2>
+        <p>HTML images are defined with the &lt;img&gt; tag.</p>
+        <p>
+          The source file (src), alternative text (alt), width, and height are
+          provided as attributes.
+        </p>
+        <h3>Example</h3>
+        <pre><code>&lt;img src="images/htmlimg.webp" alt="HTML Tutorial Image" width="400" height="200"&gt;</code></pre>
+
+        <img
+          src="images/htmlimg.webp"
+          alt="HTML Tutorial Image"
+          width="400"
+          height="200"
+        />
+      </section>
+      <hr />
+      <section id="source">
+        <h2>How to View HTML Source</h2>
+        <p>
+          Have you ever seen a Web page and wondered "Hey! How did they do
+          that?"
+        </p>
+        <p>
+          View HTML Source Code: Click CTRL + U in an HTML page, or right-click
+          on the page and select "View Page Source". This will open a new tab
+          containing the HTML source code of the page.
+        </p>
+        <p>
+          Inspect an HTML Element: Right-click on an element (or a blank area),
+          and choose "Inspect" to see what elements are made up of (you will see
+          both the HTML and the CSS). You can also edit the HTML or CSS
+          on-the-fly in the Elements or Styles panel that opens.
+        </p>
+      </section>
+    </main>
+
+    <section id="practice-exercises">
+      <h2>Practice Exercises</h2>
+
+      <h3>Exercise 1: Create Your First HTML Page</h3>
+      <p>
+        Create a simple HTML page with a heading and a paragraph. Here's what
+        you need to do:
+      </p>
+      <ol>
+        <li>Create a new HTML file</li>
+        <li>Add the DOCTYPE declaration</li>
+        <li>Add html, head, and body elements</li>
+        <li>Include a title in the head section</li>
+        <li>Add an h1 heading and a paragraph in the body</li>
+      </ol>
+
+      <details>
+        <summary>Click to reveal the solution</summary>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Welcome to HTML&lt;/h1&gt;
+  &lt;p&gt;This is my first HTML page!&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </details>
+
+      <h3>Exercise 2: Add Different Heading Levels</h3>
+      <p>
+        Create an HTML page with all six heading levels (h1 through h6) and a
+        paragraph explaining the heading hierarchy.
+      </p>
+
+      <details>
+        <summary>Click to reveal the solution</summary>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;HTML Headings&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Main Heading (Most Important)&lt;/h1&gt;
+  &lt;h2&gt;Section Heading&lt;/h2&gt;
+  &lt;h3&gt;Subsection Heading&lt;/h3&gt;
+  &lt;h4&gt;Sub-subsection Heading&lt;/h4&gt;
+  &lt;h5&gt;Minor Heading&lt;/h5&gt;
+  &lt;h6&gt;Least Important Heading&lt;/h6&gt;
+  &lt;p&gt;Headings create a hierarchy from h1 (most important) to h6 (least important).&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </details>
+
+      <h3>Exercise 3: Create a List of Your Favorite Things</h3>
+      <p>
+        Create both an ordered list and an unordered list. Include at least 3
+        items in each list.
+      </p>
+
+      <details>
+        <summary>Click to reveal the solution</summary>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;My Favorite Things&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;My Favorite Things&lt;/h1&gt;
+
+  &lt;h2&gt;Ordered List (Ranked)&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;Reading books&lt;/li&gt;
+    &lt;li&gt;Playing guitar&lt;/li&gt;
+    &lt;li&gt;Cooking&lt;/li&gt;
+  &lt;/ol&gt;
+
+  &lt;h2&gt;Unordered List&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Pizza&lt;/li&gt;
+    &lt;li&gt;Chocolate&lt;/li&gt;
+    &lt;li&gt;Ice cream&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </details>
+
+      <h3>Exercise 4: Add Links and Images</h3>
+      <p>
+        Create a page with links to different websites and include an image with
+        alt text.
+      </p>
+
+      <details>
+        <summary>Click to reveal the solution</summary>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;title&gt;Links and Images&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;Links and Images Example&lt;/h1&gt;
+
+  &lt;p&gt;Visit these websites:&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="https://www.google.com"&gt;Google&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://www.github.com"&gt;GitHub&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="https://www.mozilla.org"&gt;Mozilla&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;h2&gt;Sample Image&lt;/h2&gt;
+  &lt;img src="https://via.placeholder.com/300x200" alt="Placeholder image for demonstration"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+      </details>
+    </section>
+
+    <hr />
+    <h3>Reference Video for Chapter 2</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/GkZN_-HMCJ8"
+      title="Chapter 2 Reference Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <hr />
+
+    <section id="chapter-summary">
+      <h2>Chapter 2 Summary</h2>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>
+          <strong>HTML</strong> stands for HyperText Markup Language and is the
+          standard markup language for creating web pages
+        </li>
+        <li>
+          <strong>HTML Elements</strong> are the building blocks of HTML pages,
+          consisting of start tags, content, and end tags
+        </li>
+        <li>
+          <strong>Semantic HTML</strong> uses meaningful tags like
+          &lt;header&gt;, &lt;main&gt;, &lt;section&gt;, and &lt;footer&gt; to
+          structure content
+        </li>
+        <li>
+          <strong>Basic Structure</strong> of an HTML document includes DOCTYPE,
+          html, head, and body elements
+        </li>
+        <li>
+          <strong>Headings</strong> (&lt;h1&gt; to &lt;h6&gt;) create a
+          hierarchical structure for content organization
+        </li>
+        <li>
+          <strong>Paragraphs</strong> (&lt;p&gt;) and line breaks (&lt;br&gt;)
+          control text formatting
+        </li>
+      </ul>
+
+      <h3>What You Learned</h3>
+      <p>In this chapter, you mastered the fundamentals of HTML:</p>
+      <ul>
+        <li>The purpose and structure of HTML documents</li>
+        <li>How to use headings, paragraphs, and text formatting</li>
+        <li>Creating links with the &lt;a&gt; element</li>
+        <li>Adding images with the &lt;img&gt; element and alt text</li>
+        <li>Understanding semantic HTML structure</li>
+        <li>Creating image maps for interactive images</li>
+      </ul>
+
+      <h3>Next Steps</h3>
+      <p>
+        With HTML basics mastered, you're ready to create more complex content
+        structures. In <a href="chapter3.html">Chapter 3</a>, you'll learn:
+      </p>
+      <ul>
+        <li>How to create ordered and unordered lists</li>
+        <li>Building tables for displaying data</li>
+        <li>Nested list structures</li>
+        <li>Table accessibility features</li>
+      </ul>
+
+      <h3>Practice What You've Learned</h3>
+      <ul>
+        <li>Create a simple HTML page with headings, paragraphs, and links</li>
+        <li>Add images to your page with proper alt text</li>
+        <li>Experiment with different heading levels (h1-h6)</li>
+        <li>Try creating an image map</li>
+        <li>Build a basic webpage structure using semantic HTML</li>
+      </ul>
+
+      <aside>
+        <h4>💡 Pro Tip</h4>
+        <p>
+          Always use semantic HTML elements when possible. Search engines and
+          screen readers use these elements to understand your content
+          structure, improving both SEO and accessibility.
+        </p>
+      </aside>
+
+      <p>
+        <strong>Ready for the next chapter?</strong>
+        <a href="chapter3.html">Continue to Chapter 3 →</a>
+      </p>
+    </section>
+
+    <hr />
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HTML Resources - Interactive practice tools, code playground, references, and learning aids."
+    />
+    <meta
+      name="keywords"
+      content="HTML, resources, practice, tools, code playground, references"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Resources – Learn HTML</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Resources</li>
+        </ol>
+      </nav>
+
+      <h1>HTML Resources & Tools</h1>
+      <p>
+        Interactive tools, practice exercises, and helpful references for
+        learning HTML
+      </p>
+    </header>
+
+    <main id="main-content">
+      <section id="practice-tools">
+        <h2>Interactive Practice Tools</h2>
+        <p>
+          Test your HTML knowledge with these interactive forms and exercises.
+          Practice different input types and form elements!
+        </p>
+
+        <h3>Quick HTML Knowledge Quiz</h3>
+        <form action="#" method="get">
+          <fieldset>
+            <legend>What does HTML stand for?</legend>
+            <input type="radio" id="html1" name="html-meaning" value="wrong1" />
+            <label for="html1">HyperText Machine Language</label><br />
+            <input type="radio" id="html2" name="html-meaning" value="wrong2" />
+            <label for="html2">HighTech Markup Language</label><br />
+            <input
+              type="radio"
+              id="html3"
+              name="html-meaning"
+              value="correct"
+            />
+            <label for="html3">HyperText Markup Language</label><br />
+            <input type="radio" id="html4" name="html-meaning" value="wrong3" />
+            <label for="html4">Home Tool Markup Language</label>
+          </fieldset>
+
+          <br />
+          <label for="favorite-element"
+            >What's your favorite HTML element?</label
+          >
+          <input
+            type="text"
+            id="favorite-element"
+            name="favorite-element"
+            placeholder="e.g., &lt;p&gt;, &lt;h1&gt;, &lt;a&gt;"
+          />
+
+          <br /><br />
+          <label for="html-experience">Rate your HTML experience:</label>
+          <select id="html-experience" name="html-experience">
+            <option value="">Select level</option>
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+            <option value="expert">Expert</option>
+          </select>
+
+          <br /><br />
+          <fieldset>
+            <legend>
+              Which HTML topics have you learned? (Check all that apply)
+            </legend>
+            <input
+              type="checkbox"
+              id="topic-basic"
+              name="topics"
+              value="basic"
+            />
+            <label for="topic-basic">Basic HTML structure</label><br />
+            <input
+              type="checkbox"
+              id="topic-links"
+              name="topics"
+              value="links"
+            />
+            <label for="topic-links">Links and navigation</label><br />
+            <input
+              type="checkbox"
+              id="topic-lists"
+              name="topics"
+              value="lists"
+            />
+            <label for="topic-lists">Lists and tables</label><br />
+            <input
+              type="checkbox"
+              id="topic-forms"
+              name="topics"
+              value="forms"
+            />
+            <label for="topic-forms">Forms and input elements</label><br />
+            <input
+              type="checkbox"
+              id="topic-semantic"
+              name="topics"
+              value="semantic"
+            />
+            <label for="topic-semantic">Semantic HTML</label>
+          </fieldset>
+
+          <br />
+          <input type="submit" value="Submit Quiz" />
+          <input type="reset" value="Clear Form" />
+        </form>
+      </section>
+
+      <section id="contact-practice">
+        <h2>Contact Form Practice</h2>
+        <p>
+          Practice building and using HTML forms with this sample contact form:
+        </p>
+
+        <form action="#" method="post">
+          <label for="practice-name">Name:</label>
+          <input
+            type="text"
+            id="practice-name"
+            name="name"
+            required
+          /><br /><br />
+
+          <label for="practice-email">Email:</label>
+          <input
+            type="email"
+            id="practice-email"
+            name="email"
+            required
+          /><br /><br />
+
+          <label for="practice-message">Message:</label><br />
+          <textarea
+            id="practice-message"
+            name="message"
+            rows="4"
+            cols="50"
+            placeholder="Type your message here..."
+            required
+          ></textarea
+          ><br /><br />
+
+          <label for="practice-priority">Priority:</label>
+          <select id="practice-priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium" value="medium">Medium</option>
+            <option value="high">High</option>
+            <option value="urgent">Urgent</option></select
+          ><br /><br />
+
+          <input
+            type="checkbox"
+            id="practice-newsletter"
+            name="newsletter"
+            checked
+          />
+          <label for="practice-newsletter"
+            >Subscribe to HTML tips newsletter</label
+          ><br /><br />
+
+          <input type="submit" value="Send Message" />
+          <input type="reset" value="Clear" />
+        </form>
+      </section>
+
+      <section id="code-playground">
+        <h2>HTML Code Playground</h2>
+        <p>Practice writing and testing HTML code in real-time:</p>
+        <iframe
+          src="https://html-online.com/"
+          width="100%"
+          height="600"
+          frameborder="1"
+          title="HTML Code Editor - Practice your HTML skills"
+          allowfullscreen
+        ></iframe>
+        <p>
+          <em
+            >This interactive code editor allows you to write HTML code and see
+            the results instantly. Perfect for practicing what you've learned in
+            the tutorials!</em
+          >
+        </p>
+      </section>
+
+      <section id="references">
+        <h2>Quick References</h2>
+
+        <h3>Common HTML Elements</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Element</th>
+              <th>Purpose</th>
+              <th>Example</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&lt;h1&gt; to &lt;h6&gt;</td>
+              <td>Headings</td>
+              <td>&lt;h1&gt;Main Title&lt;/h1&gt;</td>
+            </tr>
+            <tr>
+              <td>&lt;p&gt;</td>
+              <td>Paragraph</td>
+              <td>&lt;p&gt;This is text.&lt;/p&gt;</td>
+            </tr>
+            <tr>
+              <td>&lt;a&gt;</td>
+              <td>Link</td>
+              <td>&lt;a href="page.html"&gt;Link&lt;/a&gt;</td>
+            </tr>
+            <tr>
+              <td>&lt;img&gt;</td>
+              <td>Image</td>
+              <td>&lt;img src="pic.jpg" alt="Description"&gt;</td>
+            </tr>
+            <tr>
+              <td>&lt;ul&gt; & &lt;li&gt;</td>
+              <td>Unordered list</td>
+              <td>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</td>
+            </tr>
+            <tr>
+              <td>&lt;ol&gt; & &lt;li&gt;</td>
+              <td>Ordered list</td>
+              <td>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;/ol&gt;</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="external-resources">
+        <h2>External Resources</h2>
+        <ul>
+          <li>
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+              target="_blank"
+              rel="noopener"
+            >
+              MDN Web Docs - HTML
+            </a>
+            (Comprehensive HTML reference)
+          </li>
+          <li>
+            <a
+              href="https://www.w3schools.com/html/"
+              target="_blank"
+              rel="noopener"
+            >
+              W3Schools HTML Tutorial
+            </a>
+            (Interactive learning)
+          </li>
+          <li>
+            <a
+              href="https://html.spec.whatwg.org/"
+              target="_blank"
+              rel="noopener"
+            >
+              HTML Living Standard
+            </a>
+            (Official specification)
+          </li>
+          <li>
+            <a href="https://validator.w3.org/" target="_blank" rel="noopener">
+              W3C HTML Validator
+            </a>
+            (Check your HTML code)
+          </li>
+        </ul>
+      </section>
+
+      <section id="learning-tools">
+        <h2>Learning Tools</h2>
+        <ul>
+          <li>
+            <a href="practice.html">Practice Quizzes</a> - Test your knowledge
+          </li>
+          <li><a href="glossary.html">HTML Glossary</a> - Look up terms</li>
+          <li>
+            <a href="getting-started.html">Getting Started Guide</a> - Your
+            learning path
+          </li>
+          <li>
+            <a href="contact.html">Get Help</a> - Contact us with questions
+          </li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html>

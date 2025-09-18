@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chapter 5: Forms in HTML - Learn about HTML forms, input elements, text fields, radio buttons, checkboxes, and form submission."
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Chapter 5 – Forms in HTML</title>
+  </head>
+  <body>
+    <a href="#top" class="skip-link">Skip to main content</a>
+    <header id="top">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Chapter 5</li>
+        </ol>
+      </nav>
+
+      <h1>Chapter 5 – Forms in HTML</h1>
+    </header>
+    <section id="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#form-intro">HTML Forms Introduction</a></li>
+        <li><a href="#form-element">The &lt;form&gt; Element</a></li>
+        <li><a href="#input-element">The &lt;input&gt; Element</a></li>
+        <li><a href="#text-fields">Text Fields</a></li>
+        <li><a href="#label-element">The &lt;label&gt; Element</a></li>
+        <li><a href="#radio-buttons">Radio Buttons</a></li>
+        <li><a href="#checkboxes">Checkboxes</a></li>
+        <li><a href="#submit-button">The Submit Button</a></li>
+        <li>
+          <a href="#name-attribute">The Name Attribute for &lt;input&gt;</a>
+        </li>
+        <li><a href="#mini-project">Mini Project</a></li>
+        <li><a href="#contact-form">Interactive Contact Form</a></li>
+      </ul>
+    </section>
+    <hr />
+    <main id="main-content">
+      <section id="form-intro">
+        <h2>HTML Forms Introduction</h2>
+
+        <p>
+          An HTML form is used to collect user input. The user input is most
+          often sent to a server for processing.
+        </p>
+
+        <h3>Basic Form with Validation:</h3>
+
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;form action="/submit" method="post"&gt;
+  &lt;label for="name"&gt;Full Name:*&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="name" name="name" required minlength="2" maxlength="50"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email:*&lt;/label&gt;&lt;br&gt;
+  &lt;input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="age"&gt;Age:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="number" id="age" name="age" min="13" max="120"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Submit Form"&gt;
+&lt;/form&gt;</pre
+          >
+
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;label for='name'&gt;Full Name:*&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='name' name='name' required minlength='2' maxlength='50'&gt;&lt;br&gt;&lt;br&gt;&lt;label for='email'&gt;Email:*&lt;/label&gt;&lt;br&gt;&lt;input type='email' id='email' name='email' required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$'&gt;&lt;br&gt;&lt;br&gt;&lt;label for='age'&gt;Age:&lt;/label&gt;&lt;br&gt;&lt;input type='number' id='age' name='age' min='13' max='120'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Submit Form'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="180"
+            frameborder="1"
+            title="Form Validation Example Preview"
+          ></iframe>
+        </details>
+
+        <p><strong>* Required fields</strong></p>
+
+        <h3>What Forms Are Used For:</h3>
+
+        <ul>
+          <li>Collecting user information (registration, login)</li>
+          <li>Gathering feedback and surveys</li>
+          <li>Search functionality</li>
+          <li>File uploads</li>
+          <li>Contact forms</li>
+          <li>E-commerce checkout</li>
+        </ul>
+
+        <h3>Form Submission:</h3>
+
+        <p>Form data can be submitted using:</p>
+
+        <ul>
+          <li>
+            <strong>GET method:</strong> Data sent in URL (visible, limited
+            length)
+          </li>
+          <li>
+            <strong>POST method:</strong> Data sent in request body (secure,
+            unlimited length)
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section id="form-element">
+        <h2>The &lt;form&gt; Element</h2>
+        <p>
+          The HTML &lt;form&gt; element is used to create an HTML form for user
+          input:
+        </p>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;form&gt;
+  &lt;!-- Form elements go here --&gt;
+  &lt;input type="text" name="username"&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;label&gt;Username:&lt;/label&gt;&lt;br&gt;&lt;input type='text' name='username'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Submit'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="100"
+            frameborder="1"
+            title="Form Element Example Preview"
+          ></iframe>
+        </details>
+        <p>
+          The &lt;form&gt; element is a container for different types of input
+          elements, such as: text fields, checkboxes, radio buttons, submit
+          buttons, etc.
+        </p>
+        <h3>Important Form Attributes:</h3>
+        <ul>
+          <li><strong>action:</strong> Specifies where to send form data</li>
+          <li><strong>method:</strong> HTTP method (GET or POST)</li>
+          <li><strong>name:</strong> Name of the form</li>
+          <li><strong>target:</strong> Where to display response</li>
+        </ul>
+        <h3>Complete Form Example:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;form action="/submit" method="post" name="contactForm"&gt;
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Send"&gt;
+&lt;/form&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form action='/submit' method='post' name='contactForm'&gt;&lt;label for='email'&gt;Email:&lt;/label&gt;&lt;input type='email' id='email' name='email'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Send'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="80"
+            frameborder="1"
+            title="Complete Form Example Preview"
+          ></iframe>
+        </details>
+        <p>All the different form elements are covered in this chapter.</p>
+      </section>
+      <hr />
+      <section id="input-element">
+        <h2>The &lt;input&gt; Element</h2>
+        <p>The HTML &lt;input&gt; element is the most used form element.</p>
+        <p>
+          An &lt;input&gt; element can be displayed in many ways, depending on
+          the type attribute.
+        </p>
+        <h3>Common Input Types:</h3>
+        <table border="1">
+          <tr>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Example</th>
+          </tr>
+          <tr>
+            <td>text</td>
+            <td>Single-line text input</td>
+            <td>&lt;input type="text"&gt;</td>
+          </tr>
+          <tr>
+            <td>password</td>
+            <td>Password field (hidden text)</td>
+            <td>&lt;input type="password"&gt;</td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>Email address input</td>
+            <td>&lt;input type="email"&gt;</td>
+          </tr>
+          <tr>
+            <td>radio</td>
+            <td>Radio button (single choice)</td>
+            <td>&lt;input type="radio"&gt;</td>
+          </tr>
+          <tr>
+            <td>checkbox</td>
+            <td>Checkbox (multiple choices)</td>
+            <td>&lt;input type="checkbox"&gt;</td>
+          </tr>
+          <tr>
+            <td>submit</td>
+            <td>Submit button</td>
+            <td>&lt;input type="submit"&gt;</td>
+          </tr>
+          <tr>
+            <td>button</td>
+            <td>Clickable button</td>
+            <td>&lt;input type="button"&gt;</td>
+          </tr>
+        </table>
+        <h3>Input Element Examples:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;!-- Text input --&gt;
+&lt;input type="text" placeholder="Enter your name"&gt;
+
+&lt;!-- Password input --&gt;
+&lt;input type="password" placeholder="Enter password"&gt;
+
+&lt;!-- Email input --&gt;
+&lt;input type="email" placeholder="your@email.com"&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;Text input:&lt;/p&gt;&lt;input type='text' placeholder='Enter your name'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Password input:&lt;/p&gt;&lt;input type='password' placeholder='Enter password'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Email input:&lt;/p&gt;&lt;input type='email' placeholder='your@email.com'&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="120"
+            frameborder="1"
+            title="Input Element Examples Preview"
+          ></iframe>
+        </details>
+        <p>Here are some examples:</p>
+        <ul>
+          <li>
+            &lt;input type="text"&gt; - Displays a single-line text input field
+          </li>
+          <li>
+            &lt;input type="radio"&gt; - Displays a radio button (for selecting
+            one of many choices)
+          </li>
+          <li>
+            &lt;input type="checkbox"&gt; - Displays a checkbox (for selecting
+            zero or more of many choices)
+          </li>
+          <li>
+            &lt;input type="submit"&gt; - Displays a submit button (for
+            submitting the form)
+          </li>
+          <li>&lt;input type="button"&gt; - Displays a clickable button</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="text-fields">
+        <h2>Text Fields</h2>
+        <p>
+          The &lt;input type="text"&gt; defines a single-line input field for
+          text input.
+        </p>
+        <h3>Basic Text Field:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;form&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="lname" name="lname"&gt;
+&lt;/form&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;label for='fname'&gt;First name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='fname' name='fname'&gt;&lt;br&gt;&lt;label for='lname'&gt;Last name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='lname' name='lname'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="100"
+            frameborder="1"
+            title="Basic Text Fields Preview"
+          ></iframe>
+        </details>
+        <form>
+          <label for="fname">First name:</label><br />
+          <input type="text" id="fname" name="fname" /><br />
+          <label for="lname">Last name:</label><br />
+          <input type="text" id="lname" name="lname" />
+        </form>
+        <p>
+          Note: The form itself is not visible. Also note that the default width
+          of an input field is 20 characters.
+        </p>
+        <h3>Text Field Attributes:</h3>
+        <ul>
+          <li>
+            <strong>placeholder:</strong> Shows hint text when field is empty
+          </li>
+          <li><strong>value:</strong> Sets default value</li>
+          <li><strong>maxlength:</strong> Maximum number of characters</li>
+          <li><strong>size:</strong> Width of input field</li>
+          <li><strong>required:</strong> Makes field mandatory</li>
+        </ul>
+        <h3>Enhanced Text Fields:</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;!-- With placeholder --&gt;
+&lt;input type="text" placeholder="Enter your name" name="username"&gt;
+
+&lt;!-- With default value --&gt;
+&lt;input type="text" value="John Doe" name="fullname"&gt;
+
+&lt;!-- With size and maxlength --&gt;
+&lt;input type="text" size="30" maxlength="50" name="address"&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;With placeholder:&lt;/p&gt;&lt;input type='text' placeholder='Enter your name' name='username'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;With default value:&lt;/p&gt;&lt;input type='text' value='John Doe' name='fullname'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;With size limit:&lt;/p&gt;&lt;input type='text' size='30' maxlength='20' name='address'&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="140"
+            frameborder="1"
+            title="Enhanced Text Fields Preview"
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="label-element">
+        <h2>The &lt;label&gt; Element</h2>
+        <p>Notice the use of the &lt;label&gt; element in the example above.</p>
+        <p>The &lt;label&gt; tag defines a label for many form elements.</p>
+        <p>
+          The &lt;label&gt; element is useful for screen-reader users, because
+          the screen-reader will read out loud the label when the user focuses
+          on the input element.
+        </p>
+        <p>
+          The &lt;label&gt; element also helps users who have difficulty
+          clicking on very small regions (such as radio buttons or checkboxes) -
+          because when the user clicks the text within the &lt;label&gt;
+          element, it toggles the radio button/checkbox.
+        </p>
+        <p>
+          The for attribute of the &lt;label&gt; tag should be equal to the id
+          attribute of the &lt;input&gt; element to bind them together.
+        </p>
+        <h3>Label Examples:</h3>
+        <pre>
+&lt;!-- Explicit label association --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+
+&lt;!-- Implicit label association --&gt;
+&lt;label&gt;Password: &lt;input type="password" name="password"&gt;&lt;/label&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;Explicit association:&lt;/p&gt;&lt;label for='username'&gt;Username:&lt;/label&gt;&lt;input type='text' id='username' name='username'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Implicit association:&lt;/p&gt;&lt;label&gt;Password: &lt;input type='password' name='password'&gt;&lt;/label&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="100"
+          frameborder="1"
+          title="Label Examples Preview"
+        ></iframe>
+        <h3>Label with Radio Buttons:</h3>
+        <pre>
+&lt;form&gt;
+  &lt;p&gt;Choose your gender:&lt;/p&gt;
+  &lt;input type="radio" id="male" name="gender" value="male"&gt;
+  &lt;label for="male"&gt;Male&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="female" name="gender" value="female"&gt;
+  &lt;label for="female"&gt;Female&lt;/label&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;p&gt;Choose your gender:&lt;/p&gt;&lt;input type='radio' id='male' name='gender' value='male'&gt;&lt;label for='male'&gt;Male&lt;/label&gt;&lt;br&gt;&lt;input type='radio' id='female' name='gender' value='female'&gt;&lt;label for='female'&gt;Female&lt;/label&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="80"
+          frameborder="1"
+          title="Label with Radio Buttons Preview"
+        ></iframe>
+        <h3>Benefits of Using Labels:</h3>
+        <ul>
+          <li>Improves accessibility for screen readers</li>
+          <li>Makes forms easier to use on mobile devices</li>
+          <li>Provides larger clickable areas for form controls</li>
+          <li>Helps with form validation and error messages</li>
+          <li>Improves overall user experience</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="radio-buttons">
+        <h2>Radio Buttons</h2>
+        <p>The &lt;input type="radio"&gt; defines a radio button.</p>
+        <p>
+          Radio buttons let a user select ONE of a limited number of choices.
+        </p>
+        <h3>Basic Radio Button Example:</h3>
+        <pre>
+&lt;p&gt;Choose your favorite Web language:&lt;/p&gt;
+&lt;form&gt;
+  &lt;input type="radio" id="html" name="fav_language" value="HTML"&gt;
+  &lt;label for="html"&gt;HTML&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="css" name="fav_language" value="CSS"&gt;
+  &lt;label for="css"&gt;CSS&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="javascript" name="fav_language" value="JavaScript"&gt;
+  &lt;label for="javascript"&gt;JavaScript&lt;/label&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;Choose your favorite Web language:&lt;/p&gt;&lt;form&gt;&lt;input type='radio' id='html' name='fav_language' value='HTML'&gt;&lt;label for='html'&gt;HTML&lt;/label&gt;&lt;br&gt;&lt;input type='radio' id='css' name='fav_language' value='CSS'&gt;&lt;label for='css'&gt;CSS&lt;/label&gt;&lt;br&gt;&lt;input type='radio' id='javascript' name='fav_language' value='JavaScript'&gt;&lt;label for='javascript'&gt;JavaScript&lt;/label&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="120"
+          frameborder="1"
+          title="Radio Buttons Example Preview"
+        ></iframe>
+        <p>Choose your favorite Web language:</p>
+        <form>
+          <input type="radio" id="html" name="fav_language" value="HTML" />
+          <label for="html">HTML</label><br />
+          <input type="radio" id="css" name="fav_language" value="CSS" />
+          <label for="css">CSS</label><br />
+          <input
+            type="radio"
+            id="javascript"
+            name="fav_language"
+            value="JavaScript"
+          />
+          <label for="javascript">JavaScript</label>
+        </form>
+        <h3>Radio Button Attributes:</h3>
+        <ul>
+          <li>
+            <strong>name:</strong> Groups related radio buttons (required)
+          </li>
+          <li><strong>value:</strong> Value sent when form is submitted</li>
+          <li><strong>id:</strong> Unique identifier for the input</li>
+          <li><strong>checked:</strong> Pre-selects the radio button</li>
+          <li><strong>disabled:</strong> Disables the radio button</li>
+        </ul>
+        <h3>Pre-selected Radio Button:</h3>
+        <pre>
+&lt;form&gt;
+  &lt;p&gt;Select your experience level:&lt;/p&gt;
+  &lt;input type="radio" id="beginner" name="level" value="beginner"&gt;
+  &lt;label for="beginner"&gt;Beginner&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="intermediate" name="level" value="intermediate" checked&gt;
+  &lt;label for="intermediate"&gt;Intermediate&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="advanced" name="level" value="advanced"&gt;
+  &lt;label for="advanced"&gt;Advanced&lt;/label&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;p&gt;Select your experience level:&lt;/p&gt;&lt;input type='radio' id='beginner' name='level' value='beginner'&gt;&lt;label for='beginner'&gt;Beginner&lt;/label&gt;&lt;br&gt;&lt;input type='radio' id='intermediate' name='level' value='intermediate' checked&gt;&lt;label for='intermediate'&gt;Intermediate&lt;/label&gt;&lt;br&gt;&lt;input type='radio' id='advanced' name='level' value='advanced'&gt;&lt;label for='advanced'&gt;Advanced&lt;/label&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="120"
+          frameborder="1"
+          title="Pre-selected Radio Button Preview"
+        ></iframe>
+      </section>
+      <hr />
+      <section id="checkboxes">
+        <h2>Checkboxes</h2>
+        <p>The &lt;input type="checkbox"&gt; defines a checkbox.</p>
+        <p>
+          Checkboxes let a user select ZERO or MORE options of a limited number
+          of choices.
+        </p>
+        <h3>Basic Checkbox Example:</h3>
+        <pre>
+&lt;form&gt;
+  &lt;input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"&gt;
+  &lt;label for="vehicle1"&gt; I have a bike&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="vehicle2" name="vehicle2" value="Car"&gt;
+  &lt;label for="vehicle2"&gt; I have a car&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="vehicle3" name="vehicle3" value="Boat"&gt;
+  &lt;label for="vehicle3"&gt; I have a boat&lt;/label&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;input type='checkbox' id='vehicle1' name='vehicle1' value='Bike'&gt;&lt;label for='vehicle1'&gt; I have a bike&lt;/label&gt;&lt;br&gt;&lt;input type='checkbox' id='vehicle2' name='vehicle2' value='Car'&gt;&lt;label for='vehicle2'&gt; I have a car&lt;/label&gt;&lt;br&gt;&lt;input type='checkbox' id='vehicle3' name='vehicle3' value='Boat'&gt;&lt;label for='vehicle3'&gt; I have a boat&lt;/label&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="100"
+          frameborder="1"
+          title="Basic Checkboxes Preview"
+        ></iframe>
+        <h3>Checkbox Attributes:</h3>
+        <ul>
+          <li>
+            <strong>name:</strong> Name of the checkbox (can be same for
+            multiple)
+          </li>
+          <li><strong>value:</strong> Value sent when checkbox is checked</li>
+          <li><strong>id:</strong> Unique identifier for the input</li>
+          <li><strong>checked:</strong> Pre-checks the checkbox</li>
+          <li><strong>disabled:</strong> Disables the checkbox</li>
+        </ul>
+        <h3>Pre-checked Checkboxes:</h3>
+        <pre>
+&lt;form&gt;
+  &lt;p&gt;Select your skills:&lt;/p&gt;
+  &lt;input type="checkbox" id="html" name="skill" value="html" checked&gt;
+  &lt;label for="html"&gt;HTML&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="css" name="skill" value="css"&gt;
+  &lt;label for="css"&gt;CSS&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="js" name="skill" value="js" checked&gt;
+  &lt;label for="js"&gt;JavaScript&lt;/label&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;p&gt;Select your skills:&lt;/p&gt;&lt;input type='checkbox' id='html' name='skill' value='html' checked&gt;&lt;label for='html'&gt;HTML&lt;/label&gt;&lt;br&gt;&lt;input type='checkbox' id='css' name='skill' value='css'&gt;&lt;label for='css'&gt;CSS&lt;/label&gt;&lt;br&gt;&lt;input type='checkbox' id='js' name='skill' value='js' checked&gt;&lt;label for='js'&gt;JavaScript&lt;/label&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="120"
+          frameborder="1"
+          title="Pre-checked Checkboxes Preview"
+        ></iframe>
+        <h3>Difference Between Radio Buttons and Checkboxes:</h3>
+        <table border="1">
+          <tr>
+            <th>Feature</th>
+            <th>Radio Buttons</th>
+            <th>Checkboxes</th>
+          </tr>
+          <tr>
+            <td>Selection</td>
+            <td>Only one choice</td>
+            <td>Multiple choices</td>
+          </tr>
+          <tr>
+            <td>Name attribute</td>
+            <td>Same for group</td>
+            <td>Can be different</td>
+          </tr>
+          <tr>
+            <td>Use case</td>
+            <td>Exclusive choices</td>
+            <td>Non-exclusive choices</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+      <section id="submit-button">
+        <h2>The Submit Button</h2>
+        <p>
+          The &lt;input type="submit"&gt; defines a button for submitting the
+          form data to a form-handler.
+        </p>
+        <p>
+          The form-handler is typically a file on the server with a script for
+          processing input data.
+        </p>
+        <p>The form-handler is specified in the form's action attribute.</p>
+        <h3>Basic Submit Button:</h3>
+        <pre>
+&lt;form action="/action_page.php"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;
+  &lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form action='/action_page.php'&gt;&lt;label for='fname'&gt;First name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='fname' name='fname' value='John'&gt;&lt;br&gt;&lt;label for='lname'&gt;Last name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='lname' name='lname' value='Doe'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Submit'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="120"
+          frameborder="1"
+          title="Basic Submit Button Preview"
+        ></iframe>
+        <h3>Submit Button Attributes:</h3>
+        <ul>
+          <li><strong>value:</strong> Text displayed on the button</li>
+          <li><strong>name:</strong> Name of the submit button</li>
+          <li><strong>disabled:</strong> Disables the submit button</li>
+          <li>
+            <strong>form:</strong> Associates with a form (if outside form)
+          </li>
+        </ul>
+        <h3>Different Submit Button Styles:</h3>
+        <pre>
+&lt;!-- Default submit button --&gt;
+&lt;input type="submit" value="Submit Form"&gt;
+
+&lt;!-- Submit with custom styling --&gt;
+&lt;input type="submit" value="Send Message"&gt;
+
+&lt;!-- Submit button with name --&gt;
+&lt;input type="submit" name="submit_btn" value="Register"&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;p&gt;Default submit:&lt;/p&gt;&lt;input type='submit' value='Submit Form'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Styled submit:&lt;/p&gt;&lt;input type='submit' value='Send Message'&gt;&lt;br&gt;&lt;br&gt;&lt;p&gt;Named submit:&lt;/p&gt;&lt;input type='submit' name='submit_btn' value='Register'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="140"
+          frameborder="1"
+          title="Submit Button Styles Preview"
+        ></iframe>
+      </section>
+      <hr />
+      <section id="name-attribute">
+        <h2>The Name Attribute for &lt;input&gt;</h2>
+        <p>
+          Notice that each input field must have a name attribute to be
+          submitted.
+        </p>
+        <p>
+          If the name attribute is omitted, the value of the input field will
+          not be sent at all.
+        </p>
+        <h3>Example with Name Attribute:</h3>
+        <pre>
+&lt;form action="/action_page.php"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form action='/action_page.php'&gt;&lt;label for='fname'&gt;First name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='fname' name='fname' value='John'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Submit'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="100"
+          frameborder="1"
+          title="Name Attribute Example Preview"
+        ></iframe>
+        <p>
+          This example will submit the value of the "First name" input field.
+        </p>
+        <h3>Example without Name Attribute:</h3>
+        <pre>
+&lt;form action="/action_page.php"&gt;
+  &lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="fname" value="John"&gt;&lt;br&gt;&lt;br&gt;
+  &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form action='/action_page.php'&gt;&lt;label for='fname'&gt;First name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='fname' value='John'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Submit'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="100"
+          frameborder="1"
+          title="No Name Attribute Example Preview"
+        ></iframe>
+        <p>
+          This example will NOT submit the value of the "First name" input
+          field.
+        </p>
+        <h3>Why Name Attributes Matter:</h3>
+        <ul>
+          <li>Data won't be sent without name attributes</li>
+          <li>Server-side processing requires named fields</li>
+          <li>Name attributes create key-value pairs in form data</li>
+          <li>Multiple inputs can share the same name (for arrays)</li>
+          <li>Radio buttons must have the same name to work as a group</li>
+        </ul>
+        <h3>Form Data Structure:</h3>
+        <p>When submitted, form data becomes key-value pairs:</p>
+        <pre>
+fname=John&amp;lname=Doe&amp;email=john@example.com
+</pre
+        >
+        <table border="1">
+          <tr>
+            <th>Input Name</th>
+            <th>Input Value</th>
+            <th>Result</th>
+          </tr>
+          <tr>
+            <td>fname</td>
+            <td>John</td>
+            <td>fname=John</td>
+          </tr>
+          <tr>
+            <td>lname</td>
+            <td>Doe</td>
+            <td>lname=Doe</td>
+          </tr>
+          <tr>
+            <td>email</td>
+            <td>john@example.com</td>
+            <td>email=john@example.com</td>
+          </tr>
+        </table>
+      </section>
+      <hr />
+      <section id="mini-project">
+        <h2>Mini Project</h2>
+        <p>
+          Create a registration form using the form elements you've learned!
+        </p>
+        <h3>Complete Registration Form:</h3>
+        <pre>
+&lt;form action="/register" method="post"&gt;
+  &lt;h3&gt;User Registration&lt;/h3&gt;
+
+  &lt;label for="name"&gt;Full Name:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="text" id="name" name="fullname" required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email Address:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="dob"&gt;Date of Birth:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="date" id="dob" name="dob"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Gender:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="male" name="gender" value="male"&gt;
+  &lt;label for="male"&gt;Male&lt;/label&gt;
+  &lt;input type="radio" id="female" name="gender" value="female"&gt;
+  &lt;label for="female"&gt;Female&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Skills:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="html" name="skill" value="html"&gt;
+  &lt;label for="html"&gt;HTML&lt;/label&gt;
+  &lt;input type="checkbox" id="css" name="skill" value="css"&gt;
+  &lt;label for="css"&gt;CSS&lt;/label&gt;
+  &lt;input type="checkbox" id="js" name="skill" value="js"&gt;
+  &lt;label for="js"&gt;JavaScript&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="file"&gt;Profile Picture:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="file" id="file" name="profile_pic"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Register Now"&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form action='/register' method='post'&gt;&lt;h3&gt;User Registration&lt;/h3&gt;&lt;label for='name'&gt;Full Name:&lt;/label&gt;&lt;br&gt;&lt;input type='text' id='name' name='fullname' required&gt;&lt;br&gt;&lt;br&gt;&lt;label for='email'&gt;Email Address:&lt;/label&gt;&lt;br&gt;&lt;input type='email' id='email' name='email' required&gt;&lt;br&gt;&lt;br&gt;&lt;label for='dob'&gt;Date of Birth:&lt;/label&gt;&lt;br&gt;&lt;input type='date' id='dob' name='dob'&gt;&lt;br&gt;&lt;br&gt;&lt;label&gt;Gender:&lt;/label&gt;&lt;br&gt;&lt;input type='radio' id='male' name='gender' value='male'&gt;&lt;label for='male'&gt;Male&lt;/label&gt;&lt;input type='radio' id='female' name='gender' value='female'&gt;&lt;label for='female'&gt;Female&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label&gt;Skills:&lt;/label&gt;&lt;br&gt;&lt;input type='checkbox' id='html' name='skill' value='html'&gt;&lt;label for='html'&gt;HTML&lt;/label&gt;&lt;input type='checkbox' id='css' name='skill' value='css'&gt;&lt;label for='css'&gt;CSS&lt;/label&gt;&lt;input type='checkbox' id='js' name='skill' value='js'&gt;&lt;label for='js'&gt;JavaScript&lt;/label&gt;&lt;br&gt;&lt;br&gt;&lt;label for='file'&gt;Profile Picture:&lt;/label&gt;&lt;br&gt;&lt;input type='file' id='file' name='profile_pic'&gt;&lt;br&gt;&lt;br&gt;&lt;input type='submit' value='Register Now'&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="400"
+          frameborder="1"
+          title="Complete Registration Form Preview"
+        ></iframe>
+        <h3>Form Best Practices:</h3>
+        <ul>
+          <li>Always include labels for accessibility</li>
+          <li>Use appropriate input types (email, date, etc.)</li>
+          <li>Add validation with the 'required' attribute</li>
+          <li>Group related fields together</li>
+          <li>Provide clear submit button text</li>
+          <li>Test forms on different devices</li>
+        </ul>
+        <h3>Additional Form Elements:</h3>
+        <p>Besides input elements, HTML forms support:</p>
+        <ul>
+          <li><strong>&lt;textarea&gt;:</strong> Multi-line text input</li>
+          <li><strong>&lt;select&gt;:</strong> Dropdown lists</li>
+          <li><strong>&lt;button&gt;:</strong> Clickable buttons</li>
+          <li>
+            <strong>&lt;fieldset&gt;:</strong> Group related form elements
+          </li>
+          <li><strong>&lt;legend&gt;:</strong> Caption for fieldsets</li>
+        </ul>
+        <h3>Example with Additional Elements:</h3>
+        <pre>
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contact Information&lt;/legend&gt;
+    &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="message" name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+    &lt;label for="country"&gt;Country:&lt;/label&gt;
+    &lt;select id="country" name="country"&gt;
+      &lt;option value="usa"&gt;USA&lt;/option&gt;
+      &lt;option value="canada"&gt;Canada&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+    &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;form&gt;&lt;fieldset&gt;&lt;legend&gt;Contact Information&lt;/legend&gt;&lt;label for='message'&gt;Message:&lt;/label&gt;&lt;br&gt;&lt;textarea id='message' name='message' rows='4' cols='50'&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;&lt;label for='country'&gt;Country:&lt;/label&gt;&lt;select id='country' name='country'&gt;&lt;option value='usa'&gt;USA&lt;/option&gt;&lt;option value='canada'&gt;Canada&lt;/option&gt;&lt;/select&gt;&lt;br&gt;&lt;br&gt;&lt;button type='submit'&gt;Send Message&lt;/button&gt;&lt;/fieldset&gt;&lt;/form&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="200"
+          frameborder="1"
+          title="Advanced Form Elements Preview"
+        ></iframe>
+      </section>
+      <hr />
+      <section id="working-contact-form">
+        <h2>Working Contact Form Example</h2>
+        <p>
+          This is a complete, working contact form with proper validation,
+          accessibility features, and user feedback.
+        </p>
+
+        <h3>Complete Contact Form Code:</h3>
+        <pre>
+&lt;form id="contactForm" action="#" method="post" novalidate&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Contact Information&lt;/legend&gt;
+
+    &lt;label for="fullname"&gt;Full Name:*&lt;/label&gt;&lt;br&gt;
+    &lt;input type="text" id="fullname" name="fullname" required minlength="2" maxlength="50" aria-describedby="nameHelp"&gt;
+    &lt;div id="nameHelp" class="help-text"&gt;Enter your full name (2-50 characters)&lt;/div&gt;&lt;br&gt;
+
+    &lt;label for="email"&gt;Email Address:*&lt;/label&gt;&lt;br&gt;
+    &lt;input type="email" id="email" name="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" aria-describedby="emailHelp"&gt;
+    &lt;div id="emailHelp" class="help-text"&gt;We'll never share your email with anyone else.&lt;/div&gt;&lt;br&gt;
+
+    &lt;label for="phone"&gt;Phone Number:&lt;/label&gt;&lt;br&gt;
+    &lt;input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890"&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="subject"&gt;Subject:*&lt;/label&gt;&lt;br&gt;
+    &lt;select id="subject" name="subject" required&gt;
+      &lt;option value=""&gt;Choose a subject&lt;/option&gt;
+      &lt;option value="general"&gt;General Inquiry&lt;/option&gt;
+      &lt;option value="support"&gt;Technical Support&lt;/option&gt;
+      &lt;option value="feedback"&gt;Feedback&lt;/option&gt;
+    &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;label for="message"&gt;Message:*&lt;/label&gt;&lt;br&gt;
+    &lt;textarea id="message" name="message" required minlength="10" maxlength="500" rows="5" cols="50" aria-describedby="messageHelp"&gt;&lt;/textarea&gt;
+    &lt;div id="messageHelp" class="help-text"&gt;Please enter your message (10-500 characters)&lt;/div&gt;&lt;br&gt;
+
+    &lt;label&gt;
+      &lt;input type="checkbox" name="newsletter" value="yes"&gt;
+      Subscribe to our newsletter
+    &lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+    &lt;button type="submit"&gt;Send Message&lt;/button&gt;
+    &lt;button type="reset"&gt;Reset Form&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+
+&lt;!-- Validation feedback --&gt;
+&lt;div id="formFeedback"&gt;&lt;/div&gt;</pre
+        >
+
+        <h3>Interactive Contact Form:</h3>
+        <form id="contactForm" action="#" method="post" novalidate>
+          <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="fullname">Full Name:*</label><br />
+            <input
+              type="text"
+              id="fullname"
+              name="fullname"
+              required
+              minlength="2"
+              maxlength="50"
+            />
+            <div id="nameHelp" class="help-text">
+              Enter your full name (2-50 characters)
+            </div>
+            <br />
+
+            <label for="email">Email Address:*</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+            />
+            <div id="emailHelp" class="help-text">
+              We'll never share your email with anyone else.
+            </div>
+            <br />
+
+            <label for="phone">Phone Number:</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+              placeholder="123-456-7890"
+            /><br /><br />
+
+            <label for="subject">Subject:*</label><br />
+            <select id="subject" name="subject" required>
+              <option value="">Choose a subject</option>
+              <option value="general">General Inquiry</option>
+              <option value="support">Technical Support</option>
+              <option value="feedback">Feedback</option></select
+            ><br /><br />
+
+            <label for="message">Message:*</label><br />
+            <textarea
+              id="message"
+              name="message"
+              required
+              minlength="10"
+              maxlength="500"
+              rows="5"
+              cols="50"
+            ></textarea>
+            <div id="messageHelp" class="help-text">
+              Please enter your message (10-500 characters)
+            </div>
+            <br />
+
+            <label>
+              <input type="checkbox" name="newsletter" value="yes" />
+              Subscribe to our newsletter </label
+            ><br /><br />
+
+            <button type="submit">Send Message</button>
+            <button type="reset">Reset Form</button>
+          </fieldset>
+        </form>
+
+        <h3>Form Validation Features:</h3>
+        <ul>
+          <li>
+            <strong>Required Fields:</strong> Marked with * and validated on
+            submission
+          </li>
+          <li>
+            <strong>Pattern Validation:</strong> Email format and phone number
+            patterns
+          </li>
+          <li>
+            <strong>Length Validation:</strong> Minimum and maximum character
+            limits
+          </li>
+          <li>
+            <strong>Real-time Feedback:</strong> Visual indicators for invalid
+            fields
+          </li>
+          <li>
+            <strong>Accessibility:</strong> ARIA labels and screen reader
+            support
+          </li>
+          <li>
+            <strong>User Feedback:</strong> Success/error messages after
+            submission
+          </li>
+        </ul>
+      </section>
+
+      <section id="practice-exercises">
+        <h2>Practice Exercises</h2>
+
+        <h3>Exercise 1: Contact Form</h3>
+        <p>
+          Create a contact form with text inputs, email, textarea, and submit
+          button.
+        </p>
+
+        <details>
+          <summary>Click to reveal the solution</summary>
+          <pre><code>&lt;form action="/submit-contact" method="post"&gt;
+  &lt;h3&gt;Contact Us&lt;/h3&gt;
+
+  &lt;label for="name"&gt;Full Name:&lt;/label&gt;
+  &lt;input type="text" id="name" name="name" required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email Address:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="subject"&gt;Subject:&lt;/label&gt;
+  &lt;input type="text" id="subject" name="subject" required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="message"&gt;Message:&lt;/label&gt;&lt;br&gt;
+  &lt;textarea id="message" name="message" rows="5" cols="40" required&gt;&lt;/textarea&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Send Message"&gt;
+&lt;/form&gt;</code></pre>
+        </details>
+
+        <h3>Exercise 2: Survey Form with Radio Buttons</h3>
+        <p>
+          Create a survey form asking users about their HTML experience level
+          using radio buttons.
+        </p>
+
+        <details>
+          <summary>Click to reveal the solution</summary>
+          <pre><code>&lt;form action="/submit-survey" method="post"&gt;
+  &lt;h3&gt;HTML Learning Survey&lt;/h3&gt;
+
+  &lt;label&gt;What's your HTML experience level?&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="beginner" name="experience" value="beginner"&gt;
+  &lt;label for="beginner"&gt;Beginner - Just starting&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type="radio" id="intermediate" name="experience" value="intermediate"&gt;
+  &lt;label for="intermediate"&gt;Intermediate - Know the basics&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type="radio" id="advanced" name="experience" value="advanced"&gt;
+  &lt;label for="advanced"&gt;Advanced - Build complex websites&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Which HTML topics interest you most?&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="forms" name="topics" value="forms"&gt;
+  &lt;label for="forms"&gt;Forms&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type="checkbox" id="tables" name="topics" value="tables"&gt;
+  &lt;label for="tables"&gt;Tables&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type="checkbox" id="semantic" name="topics" value="semantic"&gt;
+  &lt;label for="semantic"&gt;Semantic HTML&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Submit Survey"&gt;
+&lt;/form&gt;</code></pre>
+        </details>
+
+        <h3>Exercise 3: Registration Form</h3>
+        <p>
+          Create a user registration form with various input types including
+          password, date, and select dropdown.
+        </p>
+
+        <details>
+          <summary>Click to reveal the solution</summary>
+          <pre><code>&lt;form action="/register" method="post"&gt;
+  &lt;h3&gt;User Registration&lt;/h3&gt;
+
+  &lt;label for="username"&gt;Username:&lt;/label&gt;
+  &lt;input type="text" id="username" name="username" required minlength="3"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="password"&gt;Password:&lt;/label&gt;
+  &lt;input type="password" id="password" name="password" required minlength="8"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="email"&gt;Email:&lt;/label&gt;
+  &lt;input type="email" id="email" name="email" required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="birthdate"&gt;Birth Date:&lt;/label&gt;
+  &lt;input type="date" id="birthdate" name="birthdate"&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="country"&gt;Country:&lt;/label&gt;
+  &lt;select id="country" name="country"&gt;
+    &lt;option value=""&gt;Select a country&lt;/option&gt;
+    &lt;option value="us"&gt;United States&lt;/option&gt;
+    &lt;option value="ca"&gt;Canada&lt;/option&gt;
+    &lt;option value="uk"&gt;United Kingdom&lt;/option&gt;
+    &lt;option value="au"&gt;Australia&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Preferred contact method:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="radio" id="email-contact" name="contact" value="email" checked&gt;
+  &lt;label for="email-contact"&gt;Email&lt;/label&gt;&lt;br&gt;
+
+  &lt;input type="radio" id="phone-contact" name="contact" value="phone"&gt;
+  &lt;label for="phone-contact"&gt;Phone&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="checkbox" id="newsletter" name="newsletter" value="yes"&gt;
+  &lt;label for="newsletter"&gt;Subscribe to newsletter&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Register"&gt;
+  &lt;input type="reset" value="Clear Form"&gt;
+&lt;/form&gt;</code></pre>
+        </details>
+
+        <h3>Exercise 4: Search Form</h3>
+        <p>
+          Create a search form with text input, select dropdown for categories,
+          and search button.
+        </p>
+
+        <details>
+          <summary>Click to reveal the solution</summary>
+          <pre><code>&lt;form action="/search" method="get"&gt;
+  &lt;h3&gt;Search Our Site&lt;/h3&gt;
+
+  &lt;label for="search-query"&gt;Search for:&lt;/label&gt;
+  &lt;input type="search" id="search-query" name="q" placeholder="Enter search terms..." required&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label for="category"&gt;Category:&lt;/label&gt;
+  &lt;select id="category" name="category"&gt;
+    &lt;option value="all"&gt;All Categories&lt;/option&gt;
+    &lt;option value="tutorials"&gt;Tutorials&lt;/option&gt;
+    &lt;option value="examples"&gt;Code Examples&lt;/option&gt;
+    &lt;option value="reference"&gt;Reference&lt;/option&gt;
+    &lt;option value="faq"&gt;FAQ&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;label&gt;Search in:&lt;/label&gt;&lt;br&gt;
+  &lt;input type="checkbox" id="title" name="search_in" value="title" checked&gt;
+  &lt;label for="title"&gt;Titles&lt;/label&gt;
+
+  &lt;input type="checkbox" id="content" name="search_in" value="content" checked&gt;
+  &lt;label for="content"&gt;Content&lt;/label&gt;
+
+  &lt;input type="checkbox" id="tags" name="search_in" value="tags"&gt;
+  &lt;label for="tags"&gt;Tags&lt;/label&gt;&lt;br&gt;&lt;br&gt;
+
+  &lt;input type="submit" value="Search"&gt;
+  &lt;input type="reset" value="Clear"&gt;
+&lt;/form&gt;</code></pre>
+        </details>
+      </section>
+    </main>
+    <hr />
+    <h3>Reference Video for Chapter 5</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/a4j9R_DvZ8M"
+      title="Chapter 5 Reference Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    >
+    </iframe>
+    <hr />
+
+    <section id="chapter-summary">
+      <h2>Chapter 5 Summary</h2>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li>
+          <strong>Forms</strong> (&lt;form&gt;) collect user input and send it
+          to servers
+        </li>
+        <li>
+          <strong>Input Types</strong> include text, email, password, radio,
+          checkbox, and more
+        </li>
+        <li>
+          <strong>Labels</strong> (&lt;label&gt;) connect text descriptions to
+          form controls
+        </li>
+        <li>
+          <strong>Fieldsets</strong> (&lt;fieldset&gt;) group related form
+          elements
+        </li>
+        <li>
+          <strong>Form Validation</strong> ensures data quality before
+          submission
+        </li>
+        <li>
+          <strong>Accessibility</strong> in forms improves usability for all
+          users
+        </li>
+      </ul>
+
+      <h3>What You Learned</h3>
+      <p>In this chapter, you became proficient with HTML forms:</p>
+      <ul>
+        <li>Creating form structures with the &lt;form&gt; element</li>
+        <li>Using various input types for different data collection needs</li>
+        <li>Building radio button and checkbox groups</li>
+        <li>Creating dropdown menus with &lt;select&gt; and &lt;option&gt;</li>
+        <li>Adding form validation with HTML attributes</li>
+        <li>Making forms accessible with proper labeling</li>
+      </ul>
+
+      <h3>Next Steps</h3>
+      <p>
+        With forms mastered, you're ready to create rich multimedia experiences.
+        In <a href="chapter6.html">Chapter 6</a>, you'll learn:
+      </p>
+      <ul>
+        <li>How to add audio and video to web pages</li>
+        <li>Different multimedia formats and their uses</li>
+        <li>Creating multi-page websites</li>
+        <li>Best practices for multimedia content</li>
+      </ul>
+
+      <h3>Practice What You've Learned</h3>
+      <ul>
+        <li>Build a contact form with validation</li>
+        <li>Create a survey form with different input types</li>
+        <li>Design a registration form with proper grouping</li>
+        <li>Add accessibility features to existing forms</li>
+        <li>Test form validation with different inputs</li>
+      </ul>
+
+      <aside>
+        <h4>💡 Pro Tip</h4>
+        <p>
+          Always use labels with form controls for accessibility. Consider user
+          experience when designing forms - keep them simple and logical. HTML5
+          form validation provides basic client-side validation without
+          JavaScript.
+        </p>
+      </aside>
+
+      <p>
+        <strong>Ready for the next chapter?</strong>
+        <a href="chapter6.html">Continue to Chapter 6 →</a>
+      </p>
+    </section>
+
+    <hr />
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+    <hr />
+    <hr />
+  </body>
+</html>

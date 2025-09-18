@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HTML Learning Dashboard - Track your progress, view achievements, and get personalized study recommendations."
+    />
+    <meta
+      name="keywords"
+      content="HTML, dashboard, progress, achievements, learning, study"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Learning Dashboard – Learn HTML</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Dashboard</li>
+        </ol>
+      </nav>
+
+      <h1>Learning Dashboard</h1>
+      <p>
+        Track your HTML learning progress and get personalized recommendations
+      </p>
+    </header>
+
+    <main id="main-content">
+      <section id="progress-overview">
+        <h2>Progress Overview</h2>
+
+        <div>
+          <h3>Overall Progress</h3>
+          <p>Track your journey through HTML fundamentals</p>
+
+          <table>
+            <thead>
+              <tr>
+                <th>Category</th>
+                <th>Completed</th>
+                <th>Total</th>
+                <th>Progress</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Chapters</td>
+                <td>
+                  <input
+                    type="number"
+                    id="chapters-completed"
+                    name="chapters-completed"
+                    min="0"
+                    max="6"
+                    value="0"
+                    placeholder="0"
+                  />
+                </td>
+                <td>6</td>
+                <td>
+                  <meter value="0" min="0" max="6" id="chapters-meter">
+                    0/6
+                  </meter>
+                </td>
+                <td>
+                  <span id="chapters-status">Not Started</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Practice Tests</td>
+                <td>
+                  <input
+                    type="number"
+                    id="practice-completed"
+                    name="practice-completed"
+                    min="0"
+                    max="10"
+                    value="0"
+                    placeholder="0"
+                  />
+                </td>
+                <td>10</td>
+                <td>
+                  <meter value="0" min="0" max="10" id="practice-meter">
+                    0/10
+                  </meter>
+                </td>
+                <td>
+                  <span id="practice-status">Not Started</span>
+                </td>
+              </tr>
+              <tr>
+                <td>Projects</td>
+                <td>
+                  <input
+                    type="number"
+                    id="projects-completed"
+                    name="projects-completed"
+                    min="0"
+                    max="5"
+                    value="0"
+                    placeholder="0"
+                  />
+                </td>
+                <td>5</td>
+                <td>
+                  <meter value="0" min="0" max="5" id="projects-meter">
+                    0/5
+                  </meter>
+                </td>
+                <td>
+                  <span id="projects-status">Not Started</span>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            <button type="button">Update Progress</button>
+          </p>
+        </div>
+      </section>
+
+      <section id="achievements">
+        <h2>Achievements & Milestones</h2>
+
+        <h3>🏆 Learning Milestones</h3>
+        <ul>
+          <li>
+            <input type="checkbox" id="milestone1" />
+            <label for="milestone1">Complete Chapter 1: Web Basics</label>
+          </li>
+          <li>
+            <input type="checkbox" id="milestone2" />
+            <label for="milestone2">Create Your First HTML Page</label>
+          </li>
+          <li>
+            <input type="checkbox" id="milestone3" />
+            <label for="milestone3">Master HTML Elements & Tags</label>
+          </li>
+          <li>
+            <input type="checkbox" id="milestone4" />
+            <label for="milestone4">Build Your First Form</label>
+          </li>
+          <li>
+            <input type="checkbox" id="milestone5" />
+            <label for="milestone5">Complete All 6 Chapters</label>
+          </li>
+          <li>
+            <input type="checkbox" id="milestone6" />
+            <label for="milestone6">Score 80%+ on Practice Test</label>
+          </li>
+        </ul>
+
+        <h3>🎯 Skill Badges</h3>
+        <ul>
+          <li>
+            <input type="checkbox" id="badge1" />
+            <label for="badge1">HTML Structure Master</label>
+          </li>
+          <li>
+            <input type="checkbox" id="badge2" />
+            <label for="badge2">Semantic HTML Expert</label>
+          </li>
+          <li>
+            <input type="checkbox" id="badge3" />
+            <label for="badge3">Form Builder</label>
+          </li>
+          <li>
+            <input type="checkbox" id="badge4" />
+            <label for="badge4">Accessibility Champion</label>
+          </li>
+          <li>
+            <input type="checkbox" id="badge5" />
+            <label for="badge5">Table Designer</label>
+          </li>
+        </ul>
+      </section>
+
+      <section id="study-plan">
+        <h2>Personalized Study Plan</h2>
+
+        <details>
+          <summary>📚 Recommended Study Path</summary>
+          <ol>
+            <li>
+              <strong>Beginner Level:</strong> Start with
+              <a href="chapter1.html">Chapter 1</a> and
+              <a href="chapter2.html">Chapter 2</a>
+            </li>
+            <li>
+              <strong>Intermediate Level:</strong> Focus on
+              <a href="chapter3.html">Chapter 3</a> (Lists & Tables) and
+              <a href="chapter4.html">Chapter 4</a> (Structure)
+            </li>
+            <li>
+              <strong>Advanced Level:</strong> Master
+              <a href="chapter5.html">Chapter 5</a> (Forms) and
+              <a href="chapter6.html">Chapter 6</a> (Multimedia)
+            </li>
+            <li>
+              <strong>Practice Phase:</strong> Complete
+              <a href="practice.html">practice questions</a> and build sample
+              projects
+            </li>
+          </ol>
+        </details>
+
+        <details>
+          <summary>🎯 Weekly Goals</summary>
+          <ul>
+            <li>Complete 1-2 chapters per week</li>
+            <li>Practice with interactive forms daily</li>
+            <li>Build one small HTML project each week</li>
+            <li>Review glossary terms regularly</li>
+            <li>Test your knowledge with practice quizzes</li>
+          </ul>
+        </details>
+
+        <details>
+          <summary>🔧 Quick Practice Exercises</summary>
+          <ul>
+            <li>
+              Create a simple webpage with headings, paragraphs, and links
+            </li>
+            <li>Build a contact form with proper labels and validation</li>
+            <li>Design a table displaying product information</li>
+            <li>Make an image gallery with proper alt text</li>
+            <li>Create a navigation menu using semantic HTML</li>
+          </ul>
+        </details>
+      </section>
+
+      <section id="learning-analytics">
+        <h2>Learning Analytics</h2>
+
+        <h3>Study Time Tracker</h3>
+        <form>
+          <label for="study-session">Log Study Session:</label><br />
+          <input
+            type="date"
+            id="study-date"
+            name="study-date"
+            placeholder="Select date"
+          /><br />
+          <label for="study-hours">Hours Studied:</label>
+          <input
+            type="number"
+            id="study-hours"
+            name="study-hours"
+            min="0"
+            max="24"
+            step="0.5"
+          /><br />
+          <label for="study-topic">Topic Studied:</label>
+          <select id="study-topic" name="study-topic">
+            <option value="">Select Topic</option>
+            <option value="chapter1">Chapter 1: Web Basics</option>
+            <option value="chapter2">Chapter 2: HTML Fundamentals</option>
+            <option value="chapter3">Chapter 3: Lists & Tables</option>
+            <option value="chapter4">Chapter 4: Structure</option>
+            <option value="chapter5">Chapter 5: Forms</option>
+            <option value="chapter6">Chapter 6: Multimedia</option>
+            <option value="practice">Practice Exercises</option>
+            <option value="projects">Projects</option></select
+          ><br />
+          <input type="submit" value="Log Session" />
+        </form>
+
+        <h3>Study Streak</h3>
+        <p>Current streak: <span id="streak-count">0</span> days</p>
+        <p>Last study session: <span id="last-session">Never</span></p>
+
+        <h3>Focus Areas</h3>
+        <fieldset>
+          <legend>Areas needing more practice:</legend>
+          <input type="checkbox" id="focus-forms" name="focus-areas" />
+          <label for="focus-forms">HTML Forms</label><br />
+          <input type="checkbox" id="focus-tables" name="focus-areas" />
+          <label for="focus-tables">Tables</label><br />
+          <input type="checkbox" id="focus-semantic" name="focus-areas" />
+          <label for="focus-semantic">Semantic HTML</label><br />
+          <input type="checkbox" id="focus-accessibility" name="focus-areas" />
+          <label for="focus-accessibility">Accessibility</label><br />
+          <input type="checkbox" id="focus-multimedia" name="focus-areas" />
+          <label for="focus-multimedia">Multimedia</label>
+        </fieldset>
+      </section>
+
+      <section id="motivation">
+        <h2>Stay Motivated</h2>
+
+        <blockquote>
+          "The beautiful thing about learning is that no one can take it away
+          from you."
+          <cite>— B.B. King</cite>
+        </blockquote>
+
+        <h3>💪 Daily Motivation</h3>
+        <ul>
+          <li>Every expert was once a beginner</li>
+          <li>Progress, not perfection</li>
+          <li>Learning HTML opens doors to web development</li>
+          <li>Practice makes perfect</li>
+          <li>You're building valuable skills</li>
+        </ul>
+
+        <h3>🎉 Celebrate Your Wins</h3>
+        <ul>
+          <li>✅ Completed a chapter? Celebrate!</li>
+          <li>✅ Built your first webpage? Share it!</li>
+          <li>✅ Passed a practice test? Reward yourself!</li>
+          <li>✅ Helped someone learn HTML? Feel proud!</li>
+        </ul>
+      </section>
+
+      <section id="resources">
+        <h2>Quick Access Resources</h2>
+
+        <nav>
+          <ul>
+            <li><a href="getting-started.html">📋 Getting Started Guide</a></li>
+            <li><a href="practice.html">✏️ Practice Questions</a></li>
+            <li><a href="glossary.html">📖 HTML Glossary</a></li>
+            <li><a href="resources.html">🛠️ Tools & Resources</a></li>
+            <li><a href="contact.html">💬 Get Help</a></li>
+          </ul>
+        </nav>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html>

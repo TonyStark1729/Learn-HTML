@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Chapter 6: Media & Multi-Page Websites - Learn about multimedia formats, audio, video, and creating multi-page websites."
+    />
+    <meta
+      name="keywords"
+      content="HTML, multimedia, audio, video, formats, multi-page"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>Chapter 6 – Media & Multi-Page Websites</title>
+  <body>
+    <a href="#top" class="skip-link">Skip to main content</a>
+    <header id="top">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Chapter 6</li>
+        </ol>
+      </nav>
+
+      <h1>Chapter 6 – Media & Multi-Page Websites</h1>
+    </header>
+    <section id="toc">
+      <h2>Table of Contents</h2>
+      <ul>
+        <li><a href="#multimedia">What is Multimedia?</a></li>
+        <li><a href="#browser-support">Browser Support</a></li>
+        <li><a href="#formats">Multimedia Formats</a></li>
+        <li><a href="#video-formats">Common Video Formats</a></li>
+        <li><a href="#audio-formats">Common Audio Formats</a></li>
+        <li><a href="#media-examples">HTML Media Elements</a></li>
+        <li><a href="#multi-page">Creating Multi-Page Websites</a></li>
+        <li><a href="#links">Links to Previous Chapters</a></li>
+        <li><a href="#congrats">Congratulations!</a></li>
+      </ul>
+    </section>
+    <hr />
+    <main id="main-content">
+      <section id="multimedia">
+        <h2>What is Multimedia?</h2>
+
+        <p>
+          Multimedia comes in many different formats. It can be almost anything
+          you can hear or see, like images, music, sound, videos, records,
+          films, animations, and more.
+        </p>
+
+        <p>
+          Web pages often contain multimedia elements of different types and
+          formats.
+        </p>
+
+        <h3>Types of Multimedia:</h3>
+
+        <ul>
+          <li><strong>Images:</strong> Photos, graphics, icons, logos</li>
+          <li>
+            <strong>Audio:</strong> Music, sound effects, podcasts, voice
+            recordings
+          </li>
+          <li>
+            <strong>Video:</strong> Movies, tutorials, presentations, live
+            streams
+          </li>
+          <li>
+            <strong>Animations:</strong> GIFs, CSS animations, SVG animations
+          </li>
+          <li>
+            <strong>Interactive Media:</strong> Games, simulations, virtual
+            reality
+          </li>
+        </ul>
+
+        <h3>Basic Image Example:</h3>
+
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;img src="images/cat.jpg" alt="Image of a cat" width="300" height="200"&gt;
+</pre>
+          <p><strong>Live Example:</strong></p>
+          <img src="images/cat.jpg" alt="Image of a cat" width="300" height="200">
+        </details>
+        <h3>Why Use Multimedia?</h3>
+        <ul>
+          <li>Enhances user engagement and experience</li>
+          <li>Makes content more memorable and shareable</li>
+          <li>Provides visual learning opportunities</li>
+          <li>Supports different learning styles</li>
+          <li>Increases time spent on your website</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="browser-support">
+        <h2>Browser Support</h2>
+
+        <p>
+          The first web browsers had support for text only, limited to a single
+          font in a single color.
+        </p>
+
+        <p>
+          Later came browsers with support for colors, fonts, images, and
+          multimedia!
+        </p>
+
+        <h3>Modern Browser Features:</h3>
+
+        <ul>
+          <li>HTML5 audio and video elements</li>
+          <li>CSS3 animations and transitions</li>
+          <li>WebGL for 3D graphics</li>
+          <li>Canvas API for dynamic graphics</li>
+          <li>WebRTC for real-time communication</li>
+          <li>Service Workers for offline functionality</li>
+        </ul>
+
+        <h3>Cross-Browser Compatibility:</h3>
+
+        <p>Always test your multimedia content across different browsers:</p>
+        <table border="1">
+          <tr>
+            <th>Browser</th>
+            <th>MP4 Video</th>
+            <th>WebM Video</th>
+            <th>MP3 Audio</th>
+            <th>WAV Audio</th>
+          </tr>
+          <tr>
+            <td>Chrome</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Firefox</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Safari</td>
+            <td>✓</td>
+            <td>✗</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+          <tr>
+            <td>Edge</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+            <td>✓</td>
+          </tr>
+        </table>
+        <h3>Best Practices for Browser Support:</h3>
+        <ul>
+          <li>Provide multiple format options for media files</li>
+          <li>Use fallbacks for unsupported features</li>
+          <li>Test on multiple browsers and devices</li>
+          <li>Consider using polyfills for older browsers</li>
+          <li>Keep file sizes optimized for web delivery</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="formats">
+        <h2>Multimedia Formats</h2>
+
+        <p>
+          Multimedia elements (like audio or video) are stored in media files.
+        </p>
+
+        <p>
+          The most common way to discover the type of a file, is to look at the
+          file extension.
+        </p>
+
+        <p>
+          Multimedia files have formats and different extensions like: .wav,
+          .mp3, .mp4, .mpg, .wmv, and .avi.
+        </p>
+
+        <h3>Common File Extensions:</h3>
+        <table border="1">
+          <tr>
+            <th>Media Type</th>
+            <th>Extensions</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>Images</td>
+            <td>.jpg, .png, .gif, .svg, .webp</td>
+            <td>Static and animated images</td>
+          </tr>
+          <tr>
+            <td>Audio</td>
+            <td>.mp3, .wav, .ogg, .aac, .m4a</td>
+            <td>Sound files and music</td>
+          </tr>
+          <tr>
+            <td>Video</td>
+            <td>.mp4, .webm, .ogg, .avi, .mov</td>
+            <td>Moving pictures with sound</td>
+          </tr>
+          <tr>
+            <td>Documents</td>
+            <td>.pdf, .doc, .txt, .html</td>
+            <td>Text and formatted documents</td>
+          </tr>
+        </table>
+        <h3>Choosing the Right Format:</h3>
+        <ul>
+          <li>
+            <strong>Web Standards:</strong> Use MP4 for video, MP3 for audio
+          </li>
+          <li><strong>File Size:</strong> Balance quality vs. loading speed</li>
+          <li>
+            <strong>Compatibility:</strong> Ensure support across browsers
+          </li>
+          <li>
+            <strong>Purpose:</strong> Different formats for different uses
+          </li>
+          <li><strong>Compression:</strong> Lossy vs. lossless formats</li>
+        </ul>
+        <h3>Format Conversion:</h3>
+        <p>
+          You can convert media files using various online tools and software:
+        </p>
+        <ul>
+          <li>Online converters (CloudConvert, Convertio)</li>
+          <li>Desktop software (FFmpeg, HandBrake)</li>
+          <li>Browser-based tools</li>
+          <li>Media editing software (Adobe Premiere, Final Cut Pro)</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="video-formats">
+        <h2>Common Video Formats</h2>
+
+        <p>
+          There are many video formats out there. The MP4, WebM, and Ogg formats
+          are supported by HTML. The MP4 format is recommended by YouTube.
+        </p>
+        <table border="1">
+          <tr>
+            <th>Format</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>MPEG</td>
+            <td>
+              .mpg .mpeg - MPEG. Developed by the Moving Pictures Expert Group.
+              The first popular video format on the web. Not supported anymore
+              in HTML.
+            </td>
+          </tr>
+          <tr>
+            <td>AVI</td>
+            <td>
+              .avi - AVI (Audio Video Interleave). Developed by Microsoft.
+              Commonly used in video cameras and TV hardware. Plays well on
+              Windows computers, but not in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>WMV</td>
+            <td>
+              .wmv - WMV (Windows Media Video). Developed by Microsoft. Commonly
+              used in video cameras and TV hardware. Plays well on Windows
+              computers, but not in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>QuickTime</td>
+            <td>
+              .mov - QuickTime. Developed by Apple. Commonly used in video
+              cameras and TV hardware. Plays well on Apple computers, but not in
+              web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>RealVideo</td>
+            <td>
+              .rm .ram - RealVideo. Developed by Real Media to allow video
+              streaming with low bandwidths. Does not play in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>Flash</td>
+            <td>
+              .swf .flv - Flash. Developed by Macromedia. Often requires an
+              extra component (plug-in) to play in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>Ogg</td>
+            <td>
+              .ogg - Theora Ogg. Developed by the Xiph.Org Foundation. Supported
+              by HTML.
+            </td>
+          </tr>
+          <tr>
+            <td>WebM</td>
+            <td>
+              .webm - WebM. Developed by Mozilla, Opera, Adobe, and Google.
+              Supported by HTML.
+            </td>
+          </tr>
+          <tr>
+            <td>MPEG-4 or MP4</td>
+            <td>
+              .mp4 - MP4. Developed by the Moving Pictures Expert Group.
+              Commonly used in video cameras and TV hardware. Supported by all
+              browsers and recommended by YouTube.
+            </td>
+          </tr>
+        </table>
+        <p>
+          Note: Only MP4, WebM, and Ogg video are supported by the HTML
+          standard.
+        </p>
+        <h3>Recommended Video Settings:</h3>
+        <ul>
+          <li>
+            <strong>Resolution:</strong> 1920x1080 (Full HD) or 1280x720 (HD)
+          </li>
+          <li>
+            <strong>Frame Rate:</strong> 30 fps for web, 24-30 fps for
+            professional
+          </li>
+          <li>
+            <strong>Bitrate:</strong> 2-5 Mbps for HD, 5-10 Mbps for Full HD
+          </li>
+          <li><strong>Codec:</strong> H.264 for MP4, VP8/VP9 for WebM</li>
+          <li><strong>Aspect Ratio:</strong> 16:9 for widescreen content</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="audio-formats">
+        <h2>Common Audio Formats</h2>
+
+        <p>
+          MP3 is the best format for compressed recorded music. The term MP3 has
+          become synonymous with digital music.
+        </p>
+
+        <p>If your website is about recorded music, MP3 is the choice.</p>
+        <table border="1">
+          <tr>
+            <th>Format</th>
+            <th>Description</th>
+          </tr>
+          <tr>
+            <td>MIDI</td>
+            <td>
+              .mid .midi - MIDI (Musical Instrument Digital Interface). Main
+              format for all electronic music devices like synthesizers and PC
+              sound cards. MIDI files do not contain sound, but digital notes
+              that can be played by electronics. Plays well on all computers and
+              music hardware, but not in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>RealAudio</td>
+            <td>
+              .rm .ram - RealAudio. Developed by Real Media to allow streaming
+              of audio with low bandwidths. Does not play in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>WMA</td>
+            <td>
+              .wma - WMA (Windows Media Audio). Developed by Microsoft. Plays
+              well on Windows computers, but not in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>AAC</td>
+            <td>
+              .aac - AAC (Advanced Audio Coding). Developed by Apple as the
+              default format for iTunes. Plays well on Apple computers, but not
+              in web browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>WAV</td>
+            <td>
+              .wav - WAV. Developed by IBM and Microsoft. Plays well on Windows,
+              Macintosh, and Linux operating systems. Supported by HTML.
+            </td>
+          </tr>
+          <tr>
+            <td>Ogg</td>
+            <td>
+              .ogg - Ogg. Developed by the Xiph.Org Foundation. Supported by
+              HTML.
+            </td>
+          </tr>
+          <tr>
+            <td>MP3</td>
+            <td>
+              .mp3 - MP3 files are actually the sound part of MPEG files. MP3 is
+              the most popular format for music players. Combines good
+              compression (small files) with high quality. Supported by all
+              browsers.
+            </td>
+          </tr>
+          <tr>
+            <td>MP4</td>
+            <td>
+              .mp4 - MP4 is a video format, but can also be used for audio.
+              Supported by all browsers.
+            </td>
+          </tr>
+        </table>
+        <p>
+          Note: Only MP3, WAV, and Ogg audio are supported by the HTML standard.
+        </p>
+        <h3>Recommended Audio Settings:</h3>
+        <ul>
+          <li>
+            <strong>Sample Rate:</strong> 44.1 kHz (CD quality) or 48 kHz
+            (professional)
+          </li>
+          <li>
+            <strong>Bit Depth:</strong> 16-bit for standard, 24-bit for
+            professional
+          </li>
+          <li>
+            <strong>Bitrate:</strong> 128-320 kbps for MP3, variable for other
+            formats
+          </li>
+          <li>
+            <strong>Channels:</strong> Stereo (2 channels) for most content
+          </li>
+          <li>
+            <strong>Codec:</strong> MP3 for compatibility, AAC for better
+            quality
+          </li>
+        </ul>
+      </section>
+      <hr />
+      <section id="media-examples">
+        <h2>HTML Media Elements</h2>
+
+        <p>
+          HTML allows you to embed audio, video, and other media directly into
+          your web pages using the &lt;audio&gt;, &lt;video&gt;, and
+          &lt;iframe&gt; elements.
+        </p>
+
+        <h3>Audio Example</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;audio controls&gt;
+  &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+  &lt;source src="audio.ogg" type="audio/ogg"&gt;
+  Your browser does not support the audio element.
+&lt;/audio&gt;</pre
+          >
+          <audio controls>
+            <source
+              src="https://www.w3schools.com/html/horse.mp3"
+              type="audio/mpeg"
+            />
+            Your browser does not support the audio element.
+          </audio>
+        </details>
+        <h3>Video Example</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;video width="320" height="240" controls&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;source src="movie.webm" type="video/webm"&gt;
+  Your browser does not support the video tag.
+&lt;/video&gt;</pre
+          >
+          <video width="320" height="240" controls>
+            <source
+              src="https://www.w3schools.com/html/mov_bbb.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+        </details>
+        <h3>YouTube Embed Example</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;iframe src="https://www.youtube.com/embed/y3OOaXrFy-Q" title="YouTube video" frameborder="0" allowfullscreen&gt;&lt;/iframe&gt;</pre
+          >
+          <iframe
+            src="https://www.youtube.com/embed/y3OOaXrFy-Q"
+            title="YouTube video"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+        </details>
+      </section>
+      <hr />
+      <section id="multi-page">
+        <h2>Creating Multi-Page Websites</h2>
+
+        <p>
+          Most websites consist of multiple pages connected through navigation.
+          This section covers how to structure and link multiple HTML pages
+          together.
+        </p>
+
+        <h3>Website Structure</h3>
+
+        <p>A typical website structure includes:</p>
+        <ul>
+          <li><strong>index.html:</strong> Homepage</li>
+          <li><strong>about.html:</strong> About page</li>
+          <li><strong>contact.html:</strong> Contact information</li>
+          <li><strong>services.html:</strong> Services offered</li>
+          <li><strong>css/:</strong> Folder for stylesheets</li>
+          <li><strong>images/:</strong> Folder for images</li>
+          <li><strong>js/:</strong> Folder for JavaScript files</li>
+        </ul>
+        <h3>Navigation Menu</h3>
+        <details>
+          <summary>Click to view code example</summary>
+          <pre>
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</pre
+          >
+          <iframe
+            srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href='#'&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#'&gt;About&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href='#'&gt;Contact&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;&lt;/body&gt;&lt;/html&gt;"
+            width="100%"
+            height="80"
+            frameborder="1"
+            title="Navigation Menu Preview"
+          ></iframe>
+        </details>
+        <h3>Internal Links</h3>
+        <p>Use relative paths for linking between pages in the same website:</p>
+        <pre>
+&lt;a href="about.html"&gt;About Us&lt;/a&gt;
+&lt;a href="pages/contact.html"&gt;Contact&lt;/a&gt;
+&lt;a href="../index.html"&gt;Back to Home&lt;/a&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;p&gt;Example links:&lt;/p&gt;&lt;a href='#'&gt;About Us&lt;/a&gt; | &lt;a href='#'&gt;Contact&lt;/a&gt; | &lt;a href='#'&gt;Services&lt;/a&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="60"
+          frameborder="1"
+          title="Internal Links Preview"
+        ></iframe>
+        <h3>Consistent Layout</h3>
+        <p>Use the same header, navigation, and footer on all pages:</p>
+        <pre>
+&lt;header&gt;
+  &lt;h1&gt;My Website&lt;/h1&gt;
+  &lt;nav&gt;
+    &lt;!-- Navigation menu --&gt;
+  &lt;/nav&gt;
+&lt;/header&gt;
+
+&lt;main&gt;
+  &lt;!-- Page content --&gt;
+&lt;/main&gt;
+
+&lt;footer&gt;
+  &lt;p&gt;&amp;copy; 2024 My Website&lt;/p&gt;
+&lt;/footer&gt;</pre
+        >
+        <iframe
+          srcdoc="&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;&lt;header&gt;&lt;h1&gt;My Website&lt;/h1&gt;&lt;/header&gt;&lt;main&gt;&lt;p&gt;Page content goes here&lt;/p&gt;&lt;/main&gt;&lt;footer&gt;&lt;p&gt;&amp;copy; 2024 My Website&lt;/p&gt;&lt;/footer&gt;&lt;/body&gt;&lt;/html&gt;"
+          width="100%"
+          height="200"
+          frameborder="1"
+          title="Website Layout Preview"
+        ></iframe>
+        <h3>Best Practices</h3>
+        <ul>
+          <li>Use consistent navigation across all pages</li>
+          <li>Include a "Back to Top" link on long pages</li>
+          <li>Use descriptive link text for accessibility</li>
+          <li>Organize files in logical folders</li>
+          <li>Test all links to ensure they work</li>
+          <li>Use relative paths for internal links</li>
+        </ul>
+      </section>
+      <hr />
+      <section id="links">
+        <h2>Links to Previous Chapters</h2>
+
+        <ul>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+        </ul>
+      </section>
+
+      <hr />
+
+      <section id="congrats">
+        <div>
+          <strong>Congratulations! 🎉</strong><br />
+          You’ve completed the HTML course.
+        </div>
+      </section>
+    </main>
+    <hr />
+    <h3>Reference Video for Chapter 6</h3>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/NGYp1zCBthk"
+      title="Chapter 6 Reference Video"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+    <hr />
+
+    <section id="chapter-summary">
+      <h2>Chapter 6 Summary</h2>
+
+      <h3>Key Takeaways</h3>
+      <ul>
+        <li><strong>Multimedia</strong> includes audio, video, and other rich media formats</li>
+        <li><strong>Audio/Video Elements</strong> (&lt;audio&gt;, &lt;video&gt;) embed media with controls</li>
+        <li><strong>Multiple Formats</strong> ensure compatibility across different browsers</li>
+        <li><strong>Multi-page Websites</strong> connect related content across multiple HTML files</li>
+        <li><strong>Navigation</strong> helps users move between pages efficiently</li>
+        <li><strong>Best Practices</strong> ensure accessible and performant multimedia content</li>
+      </ul>
+
+      <h3>What You Learned</h3>
+      <p>In this final chapter, you completed your HTML journey:</p>
+      <ul>
+        <li>Adding audio and video content to web pages</li>
+        <li>Understanding different media formats and codecs</li>
+        <li>Creating multi-page website structures</li>
+        <li>Building navigation systems between pages</li>
+        <li>Implementing multimedia accessibility features</li>
+        <li>Following best practices for web content</li>
+      </ul>
+
+      <h3>Congratulations! 🎉</h3>
+      <p>You've successfully completed the HTML learning journey! You now have the skills to:</p>
+      <ul>
+        <li>Create well-structured HTML documents</li>
+        <li>Build accessible and semantic web pages</li>
+        <li>Add multimedia content to your sites</li>
+        <li>Design multi-page websites with proper navigation</li>
+        <li>Use forms to collect user input</li>
+        <li>Follow HTML best practices and standards</li>
+      </ul>
+
+      <h3>What's Next?</h3>
+      <p>Your HTML foundation is solid! Consider these next steps:</p>
+      <ul>
+        <li><strong>CSS</strong>: Learn Cascading Style Sheets to style your HTML</li>
+        <li><strong>JavaScript</strong>: Add interactivity and dynamic behavior</li>
+        <li><strong>Practice Projects</strong>: Build real websites to apply your skills</li>
+        <li><strong>Advanced Topics</strong>: Explore HTML5 APIs and modern features</li>
+        <li><strong>Web Development</strong>: Consider full-stack development paths</li>
+      </ul>
+
+      <h3>Keep Learning!</h3>
+      <ul>
+        <li>Visit our <a href="practice.html">Practice page</a> for more exercises</li>
+        <li>Check the <a href="glossary.html">Glossary</a> for term references</li>
+        <li>Explore our <a href="resources.html">Resources page</a> for additional tools</li>
+        <li><a href="contact.html">Contact us</a> with questions or feedback</li>
+      </ul>
+
+      <aside>
+        <h4>💡 Pro Tip</h4>
+        <p>The best way to solidify your HTML knowledge is through practice. Start building your own websites, experiment with different elements, and don't be afraid to make mistakes - that's how you learn!</p>
+      </aside>
+
+      <p><strong>Your HTML journey continues...</strong> <a href="practice.html">Take the Practice Quiz →</a></p>
+    </section>
+
+    <hr />
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html>

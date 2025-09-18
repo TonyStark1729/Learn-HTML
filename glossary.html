@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="HTML Glossary - Comprehensive reference of HTML terms, elements, and concepts used in web development."
+    />
+    <meta
+      name="keywords"
+      content="HTML, glossary, terms, elements, web development, reference"
+    />
+    <meta name="author" content="Learn HTML Team" />
+    <title>HTML Glossary – Learn HTML</title>
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="getting-started.html">Getting Started</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="resources.html">Resources</a>
+        <a href="chapter1.html">Chapter 1</a>
+        <a href="chapter2.html">Chapter 2</a>
+        <a href="chapter3.html">Chapter 3</a>
+        <a href="chapter4.html">Chapter 4</a>
+        <a href="chapter5.html">Chapter 5</a>
+        <a href="chapter6.html">Chapter 6</a>
+        <a href="practice.html">Practices</a>
+        <a href="glossary.html">Glossary</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <nav aria-label="breadcrumb">
+        <ol>
+          <li><a href="index.html">Home</a></li>
+          <li aria-current="page">Glossary</li>
+        </ol>
+      </nav>
+
+      <h1>HTML Glossary</h1>
+      <p>A comprehensive reference of HTML terms and concepts</p>
+    </header>
+
+    <main id="main-content">
+      <section id="introduction">
+        <h2>Introduction</h2>
+        <p>
+          This glossary provides definitions for key HTML terms, elements, and concepts covered in this tutorial.
+          Use this reference to quickly look up unfamiliar terms as you work through the chapters.
+        </p>
+        <hr />
+      </section>
+
+      <section id="glossary">
+        <h2>Interactive HTML Glossary</h2>
+
+        <p>Use the expandable sections below to explore HTML terms and concepts. Click on any section to reveal definitions and examples.</p>
+
+        <details open>
+          <summary>📄 Core HTML Concepts</summary>
+          <dl>
+            <dt>HTML</dt>
+            <dd>HyperText Markup Language - The standard markup language for creating web pages and web applications.</dd>
+            <dd><strong>Example:</strong> <code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt;Hello World&lt;/h1&gt;&lt;/body&gt;&lt;/html&gt;</code></dd>
+
+            <dt>Element</dt>
+            <dd>A fundamental component of HTML that defines the structure and content of a web page. Elements are represented by tags.</dd>
+            <dd><strong>Example:</strong> <code>&lt;p&gt;This is a paragraph element.&lt;/p&gt;</code></dd>
+
+            <dt>Tag</dt>
+            <dd>The markup that defines an HTML element. Tags are enclosed in angle brackets, like &lt;p&gt; or &lt;/p&gt;.</dd>
+            <dd><strong>Example:</strong> <code>&lt;h1&gt;Opening tag&lt;/h1&gt;Closing tag</code></dd>
+
+            <dt>Attribute</dt>
+            <dd>Additional information provided to an HTML element, specified within the opening tag. For example: &lt;img src="image.jpg" alt="Description"&gt;.</dd>
+            <dd><strong>Example:</strong> <code>&lt;a href="https://example.com" target="_blank"&gt;Link&lt;/a&gt;</code></dd>
+
+            <dt>Semantic HTML</dt>
+            <dd>HTML that uses meaningful tags to describe the content's purpose rather than just its appearance. Examples include &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, etc.</dd>
+            <dd><strong>Example:</strong> <code>&lt;header&gt;&lt;nav&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;&lt;main&gt;&lt;article&gt;&lt;h1&gt;Title&lt;/h1&gt;&lt;/article&gt;&lt;/main&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>🏗️ Document Structure</summary>
+          <dl>
+            <dt>DOCTYPE</dt>
+            <dd>A declaration that tells the browser which version of HTML the page is using. For HTML5, it's &lt;!DOCTYPE html&gt;.</dd>
+            <dd><strong>Example:</strong> <code>&lt;!DOCTYPE html&gt;</code> (always the first line of an HTML document)</dd>
+
+            <dt>Head Element</dt>
+            <dd>The &lt;head&gt; element contains meta-information about the HTML document, such as the title, character encoding, and links to external resources.</dd>
+            <dd><strong>Example:</strong> <code>&lt;head&gt;&lt;title&gt;Page Title&lt;/title&gt;&lt;meta charset="UTF-8"&gt;&lt;/head&gt;</code></dd>
+
+            <dt>Body Element</dt>
+            <dd>The &lt;body&gt; element contains all the content that is visible to users in the web browser.</dd>
+            <dd><strong>Example:</strong> <code>&lt;body&gt;&lt;h1&gt;Welcome&lt;/h1&gt;&lt;p&gt;This content is visible to users.&lt;/p&gt;&lt;/body&gt;</code></dd>
+
+            <dt>Meta Element</dt>
+            <dd>The &lt;meta&gt; element provides metadata about the HTML document, such as character encoding, viewport settings, and search engine information.</dd>
+            <dd><strong>Example:</strong> <code>&lt;meta charset="UTF-8"&gt;</code> or <code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>📝 Content Elements</summary>
+          <dl>
+            <dt>Heading Elements</dt>
+            <dd>HTML elements used to define headings, ranging from &lt;h1&gt; (most important) to &lt;h6&gt; (least important).</dd>
+            <dd><strong>Example:</strong> <code>&lt;h1&gt;Main Title&lt;/h1&gt;&lt;h2&gt;Section Title&lt;/h2&gt;&lt;h3&gt;Subsection&lt;/h3&gt;</code></dd>
+
+            <dt>Paragraph Element</dt>
+            <dd>The &lt;p&gt; element defines a paragraph of text content.</dd>
+            <dd><strong>Example:</strong> <code>&lt;p&gt;This is a paragraph of text content that will be displayed as a block.&lt;/p&gt;</code></dd>
+
+            <dt>Div Element</dt>
+            <dd>The &lt;div&gt; element is a generic container for grouping content and applying styles or scripts.</dd>
+            <dd><strong>Example:</strong> <code>&lt;div class="container"&gt;&lt;h1&gt;Title&lt;/h1&gt;&lt;p&gt;Content&lt;/p&gt;&lt;/div&gt;</code></dd>
+
+            <dt>Span Element</dt>
+            <dd>The &lt;span&gt; element is an inline container for grouping text or other inline elements.</dd>
+            <dd><strong>Example:</strong> <code>&lt;p&gt;This is &lt;span class="highlight"&gt;important&lt;/span&gt; text.&lt;/p&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>🔗 Links & Media</summary>
+          <dl>
+            <dt>Anchor Element</dt>
+            <dd>The &lt;a&gt; element creates hyperlinks to other web pages, files, or locations within the same page.</dd>
+            <dd><strong>Example:</strong> <code>&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;</code> or <code>&lt;a href="#section"&gt;Jump to Section&lt;/a&gt;</code></dd>
+
+            <dt>Image Element</dt>
+            <dd>The &lt;img&gt; element embeds images in an HTML document. Requires a src attribute and should include an alt attribute for accessibility.</dd>
+            <dd><strong>Example:</strong> <code>&lt;img src="photo.jpg" alt="A beautiful sunset" width="400" height="300"&gt;</code></dd>
+
+            <dt>Link Element</dt>
+            <dd>The &lt;link&gt; element defines relationships between the current document and external resources, commonly used for CSS stylesheets.</dd>
+            <dd><strong>Example:</strong> <code>&lt;link rel="icon" href="favicon.ico"&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>📋 Lists & Tables</summary>
+          <dl>
+            <dt>List Elements</dt>
+            <dd>HTML elements for creating lists: &lt;ul&gt; (unordered), &lt;ol&gt; (ordered), &lt;li&gt; (list item), and &lt;dl&gt; (description list).</dd>
+            <dd><strong>Example:</strong> <code>&lt;ul&gt;&lt;li&gt;Apples&lt;/li&gt;&lt;li&gt;Bananas&lt;/li&gt;&lt;/ul&gt;</code> or <code>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;li&gt;Second&lt;/li&gt;&lt;/ol&gt;</code></dd>
+
+            <dt>Table Elements</dt>
+            <dd>Elements for creating tabular data: &lt;table&gt;, &lt;tr&gt; (table row), &lt;td&gt; (table data), &lt;th&gt; (table header).</dd>
+            <dd><strong>Example:</strong> <code>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Name&lt;/th&gt;&lt;th&gt;Age&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;John&lt;/td&gt;&lt;td&gt;25&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>📝 Forms & Input</summary>
+          <dl>
+            <dt>Form Elements</dt>
+            <dd>Elements for creating user input forms: &lt;form&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;select&gt;, &lt;button&gt;, etc.</dd>
+            <dd><strong>Example:</strong> <code>&lt;form&gt;&lt;label&gt;Name:&lt;/label&gt;&lt;input type="text" name="name"&gt;&lt;button type="submit"&gt;Submit&lt;/button&gt;&lt;/form&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>🏛️ Semantic Structure</summary>
+          <dl>
+            <dt>Header Element</dt>
+            <dd>The &lt;header&gt; element represents introductory content or navigation links for its nearest sectioning element.</dd>
+            <dd><strong>Example:</strong> <code>&lt;header&gt;&lt;h1&gt;Site Title&lt;/h1&gt;&lt;nav&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/nav&gt;&lt;/header&gt;</code></dd>
+
+            <dt>Navigation Element</dt>
+            <dd>The &lt;nav&gt; element defines a section of navigation links.</dd>
+            <dd><strong>Example:</strong> <code>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="/about"&gt;About&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</code></dd>
+
+            <dt>Main Element</dt>
+            <dd>The &lt;main&gt; element represents the main content of the document, unique from sidebars, headers, and footers.</dd>
+            <dd><strong>Example:</strong> <code>&lt;main&gt;&lt;h1&gt;Article Title&lt;/h1&gt;&lt;p&gt;Main content goes here...&lt;/p&gt;&lt;/main&gt;</code></dd>
+
+            <dt>Section Element</dt>
+            <dd>The &lt;section&gt; element defines a standalone section of content that doesn't have a more specific semantic element.</dd>
+            <dd><strong>Example:</strong> <code>&lt;section&gt;&lt;h2&gt;About Us&lt;/h2&gt;&lt;p&gt;Company information...&lt;/p&gt;&lt;/section&gt;</code></dd>
+
+            <dt>Article Element</dt>
+            <dd>The &lt;article&gt; element represents a self-contained composition that could be distributed independently.</dd>
+            <dd><strong>Example:</strong> <code>&lt;article&gt;&lt;h2&gt;Blog Post Title&lt;/h2&gt;&lt;p&gt;Post content...&lt;/p&gt;&lt;time&gt;2025-01-01&lt;/time&gt;&lt;/article&gt;</code></dd>
+
+            <dt>Aside Element</dt>
+            <dd>The &lt;aside&gt; element represents content that is tangentially related to the main content.</dd>
+            <dd><strong>Example:</strong> <code>&lt;aside&gt;&lt;h3&gt;Related Links&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="#"&gt;Link 1&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/aside&gt;</code></dd>
+
+            <dt>Footer Element</dt>
+            <dd>The &lt;footer&gt; element represents footer content for its nearest sectioning element.</dd>
+            <dd><strong>Example:</strong> <code>&lt;footer&gt;&lt;p&gt;&amp;copy; 2025 Company Name&lt;/p&gt;&lt;nav&gt;&lt;a href="/contact"&gt;Contact&lt;/a&gt;&lt;/nav&gt;&lt;/footer&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>🎯 Advanced Concepts</summary>
+          <dl>
+            <dt>Accessibility</dt>
+            <dd>The practice of making web content usable by people with disabilities, including proper use of semantic HTML, alt text, and keyboard navigation.</dd>
+
+            <dt>Alt Attribute</dt>
+            <dd>An attribute used with the &lt;img&gt; element to provide alternative text for screen readers and when images fail to load.</dd>
+
+            <dt>Viewport</dt>
+            <dd>The visible area of a web page in a browser window. The viewport meta tag controls how the page is displayed on mobile devices.</dd>
+
+            <dt>Character Encoding</dt>
+            <dd>The way characters are represented in a document. UTF-8 is the most common encoding for HTML documents.</dd>
+
+            <dt>Self-Closing Tag</dt>
+            <dd>An HTML tag that doesn't require a closing tag, such as &lt;img&gt;, &lt;br&gt;, or &lt;input&gt;. Also called void elements.</dd>
+
+            <dt>Nested Elements</dt>
+            <dd>When one HTML element is placed inside another element, creating a hierarchical structure.</dd>
+
+            <dt>Block-Level Element</dt>
+            <dd>An HTML element that takes up the full width available and starts on a new line, like &lt;p&gt;, &lt;div&gt;, or &lt;h1&gt;.</dd>
+
+            <dt>Inline Element</dt>
+            <dd>An HTML element that only takes up as much width as necessary and doesn't start on a new line, like &lt;a&gt;, &lt;span&gt;, or &lt;strong&gt;.</dd>
+
+            <dt>HTML5</dt>
+            <dd>The latest version of HTML that introduced new semantic elements, multimedia support, and improved form controls.</dd>
+
+            <dt>Web Standards</dt>
+            <dd>Guidelines and specifications developed by organizations like W3C to ensure consistent behavior across different browsers and devices.</dd>
+
+            <dt>Script Element</dt>
+            <dd>The &lt;script&gt; element embeds or references JavaScript code in an HTML document.</dd>
+            <dd><strong>Example:</strong> <code>&lt;script&gt;/* JavaScript code here */&lt;/script&gt;</code></dd>
+          </dl>
+        </details>
+
+        <details>
+          <summary>🔍 Quick Search</summary>
+          <form>
+            <label for="term-search">Search terms:</label>
+            <input type="search" id="term-search" name="term-search" placeholder="Type to search glossary..." />
+            <button type="submit">Search</button>
+          </form>
+          <p><em>Note: Search functionality requires JavaScript. This is a placeholder for future enhancement.</em></p>
+        </details>
+      </section>
+    </main>
+
+    <footer>
+      <nav aria-label="footer-navigation">
+        <ul>
+          <li><a href="#top">Back to Top</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="getting-started.html">Getting Started</a></li>
+          <li><a href="dashboard.html">Dashboard</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="practice.html">Practice</a></li>
+          <li><a href="glossary.html">Glossary</a></li>
+          <li><a href="chapter1.html">Chapter 1</a></li>
+          <li><a href="chapter2.html">Chapter 2</a></li>
+          <li><a href="chapter3.html">Chapter 3</a></li>
+          <li><a href="chapter4.html">Chapter 4</a></li>
+          <li><a href="chapter5.html">Chapter 5</a></li>
+          <li><a href="chapter6.html">Chapter 6</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 Learn HTML – Step by Step. All rights reserved.</p>
+      <p>Built with pure HTML5 for educational purposes.</p>
+    </footer>
+  </body>
+</html></content>
+<parameter name="filePath">d:\HTML\glossary.html
