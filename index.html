@@ -13,6 +13,11 @@
     />
     <meta name="author" content="Learn HTML Team" />
     <title>Learn HTML – Step by Step</title>
+    <!-- Inline SVG favicon (HTML-only, no external assets) -->
+    <link
+      rel="icon"
+      href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect fill='%23f06a00' width='100' height='100'/><text x='50' y='62' font-size='54' text-anchor='middle' fill='white' font-family='Arial,Helvetica,sans-serif'>H</text></svg>"
+    />
   </head>
   <body>
     <header>
@@ -38,7 +43,66 @@
         </ol>
       </nav>
 
-      <img src="images/website_image.png" alt="website image"  />
+      <!-- Hero banner implemented as inline SVG to respect the HTML-only constraint -->
+      <figure id="hero" aria-hidden="false">
+        <svg
+          role="img"
+          aria-label="Learn HTML hero banner"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 240"
+          width="100%"
+          height="160"
+          preserveAspectRatio="xMidYMid meet"
+        >
+          <defs>
+            <linearGradient id="g1" x1="0" x2="1">
+              <stop offset="0%" stop-color="#ff8a00" />
+              <stop offset="100%" stop-color="#e52e71" />
+            </linearGradient>
+          </defs>
+          <rect x="0" y="0" width="1200" height="240" rx="12" fill="url(#g1)" />
+          <g
+            fill="white"
+            font-family="Segoe UI, Roboto, Arial, Helvetica, sans-serif"
+          >
+            <text x="60" y="90" font-size="48" font-weight="700">
+              Learn HTML
+            </text>
+            <text x="60" y="140" font-size="20" opacity="0.95">
+              Step by step tutorials, examples, and interactive practice —
+              purely HTML
+            </text>
+          </g>
+          <!-- Decorative code tag on the right -->
+          <g transform="translate(900,30)">
+            <rect
+              x="0"
+              y="0"
+              width="240"
+              height="180"
+              rx="10"
+              fill="rgba(255,255,255,0.08)"
+              stroke="white"
+              stroke-opacity="0.12"
+            />
+            <text
+              x="120"
+              y="95"
+              text-anchor="middle"
+              fill="white"
+              font-size="28"
+              font-family="monospace"
+            >
+              &lt;/&gt;
+            </text>
+          </g>
+        </svg>
+        <figcaption class="visually-hidden">
+          Hero graphic: Learn HTML — Step by step tutorials and practice
+        </figcaption>
+      </figure>
+
+      <img src="images/website_image.png" alt="website image" />
     </header>
     <main id="main-content">
       <section id="toc">
@@ -63,7 +127,10 @@
         <details>
           <summary>Click to expand introduction</summary>
           <ul>
-            <img src="images/index/html_img.png" alt="HTML5 logo showing the orange shield with white HTML text"/>
+            <img
+              src="images/index/html_img.png"
+              alt="HTML5 logo showing the orange shield with white HTML text"
+            />
             <li>HTML stands for Hyper Text Markup Language</li>
             <li>HTML is the standard markup language for creating Web pages</li>
             <li>HTML describes the structure of a Web page</li>
@@ -136,7 +203,6 @@
       </section>
 
       <section id="browsers">
-
         <h2>Web Browsers</h2>
         <img
           src="images/index/web-browser-icon.png"
@@ -417,7 +483,9 @@
               <option value="chapter1">Chapter 1 - Web Basics</option>
               <option value="chapter2">Chapter 2 - HTML Fundamentals</option>
               <option value="chapter3">Chapter 3 - Lists &amp; Tables</option>
-              <option value="chapter4">Chapter 4 - Structure &amp; Paths</option>
+              <option value="chapter4">
+                Chapter 4 - Structure &amp; Paths
+              </option>
               <option value="chapter5">Chapter 5 - Forms</option>
               <option value="chapter6">Chapter 6 - Media</option>
             </select>
@@ -425,13 +493,34 @@
             <br /><br />
             <fieldset>
               <legend>Key Activities (check when complete)</legend>
-              <input type="checkbox" id="activity-read" name="activities" value="read" />
+              <input
+                type="checkbox"
+                id="activity-read"
+                name="activities"
+                value="read"
+              />
               <label for="activity-read">Read chapter section</label><br />
-              <input type="checkbox" id="activity-notes" name="activities" value="notes" />
+              <input
+                type="checkbox"
+                id="activity-notes"
+                name="activities"
+                value="notes"
+              />
               <label for="activity-notes">Summarize key points</label><br />
-              <input type="checkbox" id="activity-practice" name="activities" value="practice" />
-              <label for="activity-practice">Attempt practice questions</label><br />
-              <input type="checkbox" id="activity-review" name="activities" value="review" />
+              <input
+                type="checkbox"
+                id="activity-practice"
+                name="activities"
+                value="practice"
+              />
+              <label for="activity-practice">Attempt practice questions</label
+              ><br />
+              <input
+                type="checkbox"
+                id="activity-review"
+                name="activities"
+                value="review"
+              />
               <label for="activity-review">Review glossary terms</label>
             </fieldset>
 
@@ -472,7 +561,9 @@
               <td>
                 <details>
                   <summary>How to verify understanding</summary>
-                  <p>Explain the main idea aloud and list three new concepts.</p>
+                  <p>
+                    Explain the main idea aloud and list three new concepts.
+                  </p>
                 </details>
               </td>
             </tr>
@@ -673,7 +764,3 @@
     </footer>
   </body>
 </html>
-
-
-
-
